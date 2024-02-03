@@ -300,23 +300,24 @@
   /* Media query for screens smaller than 768px */
   @media (max-width: 768px) {
       .hero {
-          max-width: 1200px;
+          max-width: 1000px;
       }
 
           .hero .container {
-              max-width: 1200px;
+              max-width: 1000px;
               padding: 170px 0px;
           }
 
       .hero h1 {
           font-size: 30px;
           font-weight: 600;
-          max-width: 1200px;
-          line-height: 1.5rem;
+          max-width: 1000px;
+          line-height: 2rem;
       }
 
     .hero p {
-        max-width: 1200px;
+     font-size: 16px;
+        max-width: 1000px;
     }
 
       .hero a {
