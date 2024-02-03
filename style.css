@@ -332,6 +332,47 @@
 
 
 
+/* EXPLORER SECTION */
+  header {
+      width: 80%;
+      margin: 0 auto;
+      padding: 20px;
+      margin-bottom: 20px;
+      background-color: #f1f1f1;
+      border: 1px solid #ddd;
+      border-radius: 16px;
+  }
+
+  header h1 {
+      font-size: 40px;
+      margin: 0;
+  }
+
+  header p {
+      font-size: 22px;
+      text-align: center;
+      margin: 0;
+  }
+
+  /* Media query for screens smaller than 768px */
+  @media (max-width: 768px) {
+    header {
+          max-width: 1000px;
+      }
+
+
+          header p {
+          font-size: 18px;
+          max-width: 1000px;
+      }
+  }
+ /* /EXPLORER SECTION */
+
+
+
+
+
+
   .container {
       padding: 64px;
   }
