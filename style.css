@@ -304,7 +304,8 @@
 
           .hero .container {
               max-width: 1000px;
-              padding: 150px 0px;
+              padding: 120px 0px;
+           margin-top: 30px;
           }
 
       .hero h1 {
