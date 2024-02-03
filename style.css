@@ -334,7 +334,7 @@
 
 /* EXPLORER SECTION */
   header {
-      width: 80%;
+      width: 90%;
       margin: 0 auto;
       padding: 20px;
       background-color: #f1f1f1;
@@ -352,6 +352,7 @@
   /* Media query for screens smaller than 768px */
   @media (max-width: 768px) {
     header {
+          padding: 0px 0px;
           max-width: 1000px;
       }
 
