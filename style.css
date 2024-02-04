@@ -430,7 +430,6 @@ a:focus {
 @media (max-width: 768px) {
     .tech-gov {
      max-width: 1000px;
-            padding: 50px 0px;
         flex-direction: column;
         text-align: center;
     }
