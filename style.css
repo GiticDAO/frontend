@@ -429,6 +429,8 @@ a:focus {
 /* Responsive layout - makes a one column-layout instead of two-column layout */
 @media (max-width: 768px) {
     .tech-gov {
+     max-width: 1000px;
+            padding: 50px 0px;
         flex-direction: column;
         text-align: center;
     }
