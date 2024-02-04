@@ -433,6 +433,14 @@ a:focus {
         flex-direction: column;
         text-align: center;
     }
+
+ .tech-gov .flex-item-right {
+    padding: 10px 0px;
+}
+
+ .tech-gov .flex-item-left {
+    padding: 10px 0px;
+}
 }
 /* /Tech/Gov Section Styles */
 
