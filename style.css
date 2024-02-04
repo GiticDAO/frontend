@@ -303,7 +303,9 @@
 }
 
 @media (max-width: 768px) {
-    /* Add responsive styles here */
+    #home {
+    max-width: 1000px;
+}
 }
 /*--- /HOME SECTION ---*/
 
@@ -362,7 +364,7 @@ a:focus {
         }
         .hero .container {
             max-width: 1000px;
-            padding: 160px 0px;
+            padding: 100px 0px;
         }
         .hero .container h1 {
             font-size: 30px;
@@ -371,11 +373,11 @@ a:focus {
             line-height: 2rem;
         }
         .hero .container p {
-            font-size: 18px;
+            font-size: 17px;
             max-width: 1000px;
         }
         .hero .container a {
-            font-size: 18px;
+            font-size: 17px;
             width: 100%;
             padding: 11px;
             margin: 0.3rem auto;
@@ -428,6 +430,7 @@ a:focus {
 @media (max-width: 768px) {
     .tech-gov {
         flex-direction: column;
+        text-align: center;
     }
 }
 /* /Tech/Gov Section Styles */
