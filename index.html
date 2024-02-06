@@ -11,569 +11,1737 @@
 </head>
 
 <body>
+  * {
+      box-sizing: border-box;
+  }
+
+  ::-webkit-scrollbar {
+      width: 12px;
+      height: 0px;
+      max-height: 4px;
+  }
+
+  ::-webkit-scrollbar-corner {
+      background: rgba(255, 255, 255, 0);
+  }
+
+  ::-webkit-scrollbar-thumb {
+      background-color: rgba(17, 25, 40, 0.75);
+      border-radius: 160px;
+  }
+
+  ::-webkit-scrollbar-track {
+      background: var(--baseColor);
+  }
+
+  * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+  }
 
 
-    <!-- Nav -->
-    <section class="nav-cover">
-        <!------Alerts------->
-        <div class="alert">
-            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-            <p class="tag rounded">
-                <svg id="edit-brightness" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                    <path id="Path_603" data-name="Path 603"
-                        d="M13,6a.75.75,0,0,1-.75-.75,1.5,1.5,0,0,0-1.5-1.5.75.75,0,0,1,0-1.5,1.5,1.5,0,0,0,1.5-1.5.75.75,0,0,1,1.5,0,1.5,1.5,0,0,0,1.5,1.5.75.75,0,0,1,0,1.5,1.5,1.5,0,0,0-1.5,1.5A.75.75,0,0,1,13,6Z"
-                        fill="var(--light)" />
-                    <path id="Path_604" data-name="Path 604"
-                        d="M6,16a1,1,0,0,1-1-1,4,4,0,0,0-4-4A1,1,0,1,1,1,9,4,4,0,0,0,5,5,1,1,0,0,1,7,5a4,4,0,0,0,4,4,1,1,0,0,1,0,2,4,4,0,0,0-4,4,1,1,0,0,1-1,1Z"
-                        fill="var(--light)" />
-                </svg>
-                v3.1 released <span id="demo"></span> <a href="#">&nearr;</a>
-            </p>
-        </div>
-        <!------/Alerts------>
-        <div id="nav" class="nav">
-            <input type="checkbox" id="nav-check">
-            <div class="nav-header">
-                <div class="nav-title">
-                    <span><img src="https://cdn.ethancopping.com/codepen/Interactive%20Dual%20Hover%20Card/proxmox.png"></span>
-                </div>
-            </div>
-            <div class="nav-btn">
-                <label for="nav-check">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </label>
-            </div>
-            <div class="nav-links">
-                <a href="#nav-about">Grantpaper</a>
-                <a href="#nav-ecosystem">Constitution</a>
-                <a href="#nav-governance">Budget</a>
-                <a href="#">Docs</a>
-                <a href="#bank" class="reserve-btn"
-                    style="border: 2px solid var(--baseColor-1); box-shadow: var(--box-shadow); border-radius: 8px; font-size: 20px; font-weight: 500; color: var(--whiteColor); padding: 7px 15px; margin-right: 10px;">
-                    <svg class="w-6 h-6 text-gray-800 dark:text-white" height="20" width="20" aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg" fill="var(--violetredColor)" viewBox="0 0 20 20">
-                        <path
-                            d="M11.074 4 8.442.408A.95.95 0 0 0 7.014.254L2.926 4h8.148ZM9 13v-1a4 4 0 0 1 4-4h6V6a1 1 0 0 0-1-1H1a1 1 0 0 0-1 1v13a1 1 0 0 0 1 1h17a1 1 0 0 0 1-1v-2h-6a4 4 0 0 1-4-4Z" />
-                        <path
-                            d="M19 10h-6a2 2 0 0 0-2 2v1a2 2 0 0 0 2 2h6a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1Zm-4.5 3.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2ZM12.62 4h2.78L12.539.41a1.086 1.086 0 1 0-1.7 1.352L12.62 4Z" />
-                    </svg>&nbsp;Connect Wallet
-                </a>
-            </div>
-            <!-- progress bar -->
-            <div class="progress-container">
-                <div class="progress-bar" id="myBar"></div>
-            </div>
-            <!-- /progress bar -->
-        </div>
-    </section>
-    <!-- /Nav -->
-    
-    <!--- HOME SECTION --->
-    <main id="main-content">
-        <div id="home" class="page">
+  :root {
+    --bs-blue: #0d6efd;
+    --bs-indigo: #6610f2;
+    --bs-purple: #6f42c1;
+    --bs-pink: #d63384;
+    --bs-red: #dc3545;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #ffc107;
+    --bs-green: #198754;
+    --bs-teal: #20c997;
+    --bs-cyan: #0dcaf0;
+    --bs-black: #000;
+    --bs-white: #fff;
+    --bs-gray: #6c757d;
+    --bs-gray-dark: #343a40;
+    --bs-gray-100: #f8f9fa;
+    --bs-gray-200: #e9ecef;
+    --bs-gray-300: #dee2e6;
+    --bs-gray-400: #ced4da;
+    --bs-gray-500: #adb5bd;
+    --bs-gray-600: #6c757d;
+    --bs-gray-700: #495057;
+    --bs-gray-800: #343a40;
+    --bs-gray-900: #212529;
+    --bs-primary: #0d6efd;
+    --bs-secondary: #6c757d;
+    --bs-success: #198754;
+    --bs-info: #0dcaf0;
+    --bs-warning: #ffc107;
+    --bs-danger: #dc3545;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
+    --bs-primary-rgb: 13,110,253;
+    --bs-secondary-rgb: 108,117,125;
+    --bs-success-rgb: 25,135,84;
+    --bs-info-rgb: 13,202,240;
+    --bs-warning-rgb: 255,193,7;
+    --bs-danger-rgb: 220,53,69;
+    --bs-light-rgb: 248,249,250;
+    --bs-dark-rgb: 33,37,41;
+    --bs-white-rgb: 255,255,255;
+    --bs-black-rgb: 0,0,0;
+    --bs-body-color-rgb: 33,37,41;
+    --bs-body-bg-rgb: 255,255,255;
+    --bs-font-sans-serif: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    --bs-font-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+    --bs-gradient: linear-gradient(180deg,hsla(0,0%,100%,.15),hsla(0,0%,100%,0));
+    --bs-body-font-family: var(--bs-font-sans-serif);
+    --bs-body-font-size: 1rem;
+    --bs-body-font-weight: 400;
+    --bs-body-line-height: 1.5;
+    --bs-body-color: #212529;
+    --bs-body-bg: #fff;
+    --bs-border-width: 1px;
+    --bs-border-style: solid;
+    --bs-border-color: #dee2e6;
+    --bs-border-color-translucent: rgba(0,0,0,.175);
+    --bs-border-radius: 0.375rem;
+    --bs-border-radius-sm: 0.25rem;
+    --bs-border-radius-lg: 0.5rem;
+    --bs-border-radius-xl: 1rem;
+    --bs-border-radius-2xl: 2rem;
+    --bs-border-radius-pill: 50rem;
+    --bs-link-color: #0d6efd;
+    --bs-link-hover-color: #0a58ca;
+    --bs-code-color: #d63384;
+    --bs-highlight-bg: #fff3cd;
+    scroll-behavior: auto!important;
+}
 
 
-            <!-- Hero Section -->
-              <section class="hero">
-            <div class="content">
-                <p class="header-text">Where <span style="color: var(--violetredColor);">Blockchain</span> States Unite for Decentralized Empowerment.</p>
-                    <a href="#about">Grantpaper
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="1" stroke-linecap="butt" stroke-linejoin="round">
-                        <path d="M3 15v4c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2v-4M17 9l-5 5-5-5M12 12.8V2.5" />
-                    </svg>
-                </a>
-                <a href="#about" style="background-color: transparent; color: var(--whiteColor); border: 2px solid var(--baseColor-1);">
-                    Explore Gitic
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="1" stroke-linecap="butt" stroke-linejoin="round">
-                        <path d="M7 17l9.2-9.2M17 17V7H7" />
-                    </svg>
-                </a>
-            </div>
-        </section>
-            <!-- /Hero Section -->
+  /* ROOT COLOR SECTION */
+  :root {
+      --pureBlack: #000000;
+      --mainBlack: #0b0b09;
+      --mainColor: #21252b;
+      --backgroundColor: #0b0b09;
+      --white: #ffffff;
+      --whiteMain: #f9f9f9;
+      --baseColor: #606468;
+      --goldColor: #ffd405;
+      --violetredColor: #c71585;
+      --cyanColor: #0dcaf0;
+      --brownColor: #FC6D6D;
+      --lemonColor: #458f47;
+      --lemonLess: #8aa78d;
+      --baseColor: #a6a6a6;
+      --box-shadow: 0 2px 10px #0d0d0d;
+      --font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  }
+
+  :root {
+      --background-color: #f2f2f2;
+      --background-overlay-opacity: 0;
+      --color-meteorite-dark: #2f1c6a;
+      --color-meteorite: #8c85ff;
+      --color-meteorite-light: #d5dfff;
+      --color-primary-dark: #5025d1;
+      --color-primary: #673de6;
+      --color-primary-light: #ebe4ff;
+      --color-danger-dark: #d63163;
+      --color-danger: #fc5185;
+      --color-danger-light: #ffe8ef;
+      --color-warning-dark: #fea419;
+      --color-warning: #ffcd35;
+      --color-warning-light: #fff8e2;
+      --color-success-dark: #008361;
+      --color-success: #00b090;
+      --color-success-light: #def4f0;
+      --color-dark: #1d1e20;
+      --color-gray-dark: #36344d;
+      --color-gray: #727586;
+      --color-gray-border: #dadce0;
+      --color-gray-light: #f2f3f6;
+      --color-light: #fff;
+      --color-azure: #357df9;
+      --color-azure-light: #e3ebf9;
+      --color-azure-dark: #265ab2;
+  }
+
+  :root {
+    --background-1: #181A20;
+    --background-2: #1E2329;
+    --backgroundColor: #0b0b09;
+        --whiteColor: #fcedd3;
+        --baseColor: #a6a6a6;
+    --mainColor: #21252b;
+    --whiteLess: #f1f2f6;
+    --baseColor-1: #999797;
+    --baseColor-2: #cccccc;
+    --goldColor: #ffd405;
+    --lemonButton: #7F56D9;
+    --fashionColor: #3cc8b4;
+    --brownColor: #FC6D6D;
+    --buttonColor: #721c24;
+    --buttonLite: #f8d7da;
+    --cyanColor: #0dcaf0;
+    --infoColor: #0dcaf0;
+    --purpleColor: #a55dce;
+    --violetredColor: #c71585;
+    --font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
 
 
-
-            <!-- Gitic Rocket Section -->
-        <section class="extra" style="background-color: transparent;">
-                <header>
-                    <p>Welcome to the Future of Decentralized Governance
-                        <a href="#" style="color: var(--violetredColor); text-decoration: none;">
-                        Gitic Token IGO</a> Presale Explorer 🚀
-                    </p>
-                </header>
-            </section>
-        <!-- /Gitic Rocket Section -->
+  html {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      font-size: 100%;
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
+  }
 
 
+  body * {
+      -webkit-animation: scale 0.7s ease-in-out;
+      -moz-animation: scale 0.7s ease-in-out;
+      animation: scale 0.7s ease-in-out;
+  }
 
-            <!-- Foundation Section -->
-                 <div class="flex-about">
-  <div class="flex-item-left">
-    <img src="https://cdn.ethancopping.com/codepen/Interactive%20Dual%20Hover%20Card/proxmox.png" width="450" height="450">  
-  </div>
-  <div class="flex-item-right">
-    <h1>Foundation</h1>
-    <p>
-    The Gitic Foundation serves as the organizational hub and driving force behind the Gitic ecosystem.
-     Comprising developers, contributors, and visionaries, the Foundation is dedicated to advancing the
-      principles of decentralization, innovation, and community empowerment within the blockchain space.
-       As the architects of Gitic's revolutionary journey, the Foundation oversees the development, 
-       governance, and collaborative initiatives that propel the project forward. It fosters a global
-        community engaged in diverse activities, from coding and governance decisions to innovative 
-        projects spanning various technological fields.    
-    </p>
-    <a href="#foundation">
-        Join Foundation
-        </a>
-  </div>
-</div>
-        <!-- Foundation Section -->
+  body {
+      background-color: var(--background-1);
+      -webkit-font-smoothing: antialiased;
+    color: var(--baseColor-2);
+    text-rendering: optimizeLegibility;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100hv;
+  }
 
 
+  /* NAV SECTION */
+  .nav-cover {
+      width: 100%;
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      z-index: 3;
+  }
 
+  .alert {
+      background: var(--violetredColor);
+      font-size: 17px;
+      font-family: 'Courier New', Courier, monospace;
+      color: var(--whiteColor);
+      /* Use your preferred color */
+      width: 100%;
+      padding: 10px;
+      text-align: center;
+      position: relative;
+  }
 
+  .closebtn {
+      margin-left: 15px;
+      color: var(--buttonColor);
+      /* Use your preferred color */
+      font-weight: bold;
+      float: right;
+      font-size: 22px;
+      line-height: 20px;
+      cursor: pointer;
+      transition: 0.3s;
+  }
 
+  .closebtn:hover {
+      color: var(--whiteColor);
+      /* Use your preferred color */
+  }
 
-        <div class="flex-states">
-  <div class="flex-item-left">
-<div class="claim-card">
-  <h1>Gitic Airdrop Claim</h1>
-  <p>Claim your free GITIC tokens now!</p>
-  <div class="countdown" id="countdown">GITIC 70% for Community</div>
-  <button onclick="claimAirdrop()">
-    Claim Airdrop
-</button>
-</div>
-  </div>
+  .alert a {
+      color: inherit;
+      text-decoration: none;
+  }
 
-  <div class="flex-item-right">
-<div class="presale-card">
-  <h1>Gitic Presale</h1>
-  <p>Participate in the GITIC token presale and let reshape together!</p>
-  <div class="countdown" id="countdown">Presale ends in: 10 days 05:30:20</div>
-  <button onclick="joinPresale()">
-    Join Presale
-</button>
-</div>
-  </div>
-</div>
+  .nav span > img {
+      display: inline-block;
+      width: 35px;
+      margin-top: -8px;
+      left: 10px;
+      z-index: 1;
+  }
 
+  .nav {
+      /* From https://css.glass */
+background: var(--background-1);
+border-bottom: 1px solid rgba(24, 26, 32, 0.3);
+      height: 65px;
+      width: 100%;
+      position: relative;
+  }
 
+  .nav>.nav-header {
+      display: inline;
+  }
 
+  .nav>.nav-header>.nav-title {
+      display: inline-block;
+      font-size: 22px;
+      padding: 25px 8px 25px 8px;
+  }
 
+  .nav>.nav-btn {
+      display: none;
+  }
 
-        <section class="title">
-                <div class="content">
-                    <h1>Smart Governance</h1>
-                </div>
-            </section>
+  .nav>.nav-links {
+      display: inline;
+      float: right;
+      font-size: 19px;
+  }
 
+  .nav>.nav-links>a {
+      color: var(--whiteColor);
+      display: inline-block;
+      padding: 22px 10px 22px 10px;
+      text-decoration: none;
+  }
 
+  .nav>.nav-links>a:hover,
+  a:focus {
+      transform: translateY(-.2rem);
+      color: var(--bs-decoration-color);
+      text-decoration: none;
+  }
 
-<!-- Sticky Section -->
-<section class="extra"></section>
-<section id="wrapper">
-  <div id="sticky" style="border: 2px solid #bc48ff;">
-    <svg id="edit-brightness" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                    <path id="Path_603" data-name="Path 603"
-                        d="M13,6a.75.75,0,0,1-.75-.75,1.5,1.5,0,0,0-1.5-1.5.75.75,0,0,1,0-1.5,1.5,1.5,0,0,0,1.5-1.5.75.75,0,0,1,1.5,0,1.5,1.5,0,0,0,1.5,1.5.75.75,0,0,1,0,1.5,1.5,1.5,0,0,0-1.5,1.5A.75.75,0,0,1,13,6Z"
-                        fill="var(--whiteColor)" />
-                    <path id="Path_604" data-name="Path 604"
-                        d="M6,16a1,1,0,0,1-1-1,4,4,0,0,0-4-4A1,1,0,1,1,1,9,4,4,0,0,0,5,5,1,1,0,0,1,7,5a4,4,0,0,0,4,4,1,1,0,0,1,0,2,4,4,0,0,0-4,4,1,1,0,0,1-1,1Z"
-                        fill="var(--whiteColor)" />
-                </svg>
-  </div>
-<!-- Inner Section -->
-<div class="gitic-sticky">
-<div class="flex-item-right">
-<h1><span style="color: #bc48ff;">Smart</span> Contract Constitution</h1>
-<p>
-The Gitic smart contract Constitution refers to a set of rules, principles, and guidelines that govern
- the decentralized governance project named Gitic. In the context of blockchain and decentralized platforms,
-  a constitution outlines the structure and processes by which the project operates, makes decisions, and
-   involves its community members. A Gitic smart contract Constitution aims to provide a clear and
-    transparent framework for governance, ensuring that decision-making processes align with the
-     project's principles and goals. It serves as a foundational document that guides the decentralized
-      governance of the Gitic ecosystem.
-</p>
-</div>
-<div class="flex-item-left">
-<img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/full_front_back.jpg" alt="this is image">
-</div>   
-</div>
-<!-- /Inner Section -->
-</section>  
-<!-- /Sticky Section -->
+  .nav>#nav-check {
+      display: none;
+  }
 
-<!-- Sticky Section -->
-<section id="wrapper">
-  <div id="sticky" style="border: 2px solid #bc48ff;">
-    <svg id="edit-brightness" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                    <path id="Path_603" data-name="Path 603"
-                        d="M13,6a.75.75,0,0,1-.75-.75,1.5,1.5,0,0,0-1.5-1.5.75.75,0,0,1,0-1.5,1.5,1.5,0,0,0,1.5-1.5.75.75,0,0,1,1.5,0,1.5,1.5,0,0,0,1.5,1.5.75.75,0,0,1,0,1.5,1.5,1.5,0,0,0-1.5,1.5A.75.75,0,0,1,13,6Z"
-                        fill="var(--whiteColor)" />
-                    <path id="Path_604" data-name="Path 604"
-                        d="M6,16a1,1,0,0,1-1-1,4,4,0,0,0-4-4A1,1,0,1,1,1,9,4,4,0,0,0,5,5,1,1,0,0,1,7,5a4,4,0,0,0,4,4,1,1,0,0,1,0,2,4,4,0,0,0-4,4,1,1,0,0,1-1,1Z"
-                        fill="var(--whiteColor)" />
-                </svg>
-  </div>
-<!-- Inner Section -->
-<div class="gitic-sticky">
-<div class="flex-item-left">
-<img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/full_front_back.jpg" alt="this is image">
-</div>  
+  @media (max-width: 768px) {
+     .nav {
+      height: 57px;
+  }
 
-<div class="flex-item-right">
-<h1><span style="color: #f83d23;">States</span> Blockchain Networks</h1>
-<p>
-Gitic's states are various blockchain networks that are integrated into the Gitic decentralized governance system.
- Each of these integrated blockchains can be considered as "state" within the Gitic network. These states may include
-  well-known blockchain networks like Ethereum, Solana, Cardano, and others. The states could signify the individual
-   entities or instances of blockchain networks that participate in the broader Gitic ecosystem. Gitic aims to
-    provide decentralized governance that spans across multiple states, allowing users and citizens from different
-     blockchain networks to participate in the governance processes of the Gitic protocol.
-</p>
-</div>
-</div>
-<!-- /Inner Section -->
-</section>  
-<!-- /Sticky Section -->
+  .nav span img {
+      display: inline-block;
+      width: 30px;
+      z-index: 1;
+      margin-top:-10px;
+  }
 
+      .nav>.nav-btn {
+          display: inline-block;
+          position: absolute;
+          right: 0px;
+          top: 0px;
+      }
 
-<!-- Sticky Section -->
-<section id="wrapper">
-  <div id="sticky" style="border: 2px solid #bc48ff;">
-    <svg id="edit-brightness" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                    <path id="Path_603" data-name="Path 603"
-                        d="M13,6a.75.75,0,0,1-.75-.75,1.5,1.5,0,0,0-1.5-1.5.75.75,0,0,1,0-1.5,1.5,1.5,0,0,0,1.5-1.5.75.75,0,0,1,1.5,0,1.5,1.5,0,0,0,1.5,1.5.75.75,0,0,1,0,1.5,1.5,1.5,0,0,0-1.5,1.5A.75.75,0,0,1,13,6Z"
-                        fill="var(--whiteColor)" />
-                    <path id="Path_604" data-name="Path 604"
-                        d="M6,16a1,1,0,0,1-1-1,4,4,0,0,0-4-4A1,1,0,1,1,1,9,4,4,0,0,0,5,5,1,1,0,0,1,7,5a4,4,0,0,0,4,4,1,1,0,0,1,0,2,4,4,0,0,0-4,4,1,1,0,0,1-1,1Z"
-                        fill="var(--whiteColor)" />
-                </svg>
-  </div>
-<!-- Inner Section -->
-<div class="gitic-sticky">
-<div class="flex-item-right">
-<h1><span style="color: #bc48ff;">Gitic</span> Citizenship</h1>
-<p>
-Gitic Citizenship is a pivotal aspect of the Gitic ecosystem, offering individuals a decentralized identity
- within the various Gitic states across blockchain networks. It provides citizens with unique opportunities
-  and privileges, emphasizing freedom, participation, and engagement in the decentralized governance and
-   activities facilitated by Gitic. As a decentralized ID, Gitic Citizenship empowers users to actively
-    contribute to the decision-making processes, propose initiatives, and exercise their rights within the Gitic ecosystem.
-</p>
-</div>
-<div class="flex-item-left">
-<img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/full_front_back.jpg" alt="this is image">
-</div>   
-</div>
-<!-- /Inner Section -->
-</section>  
-<!-- /Sticky Section -->
+      .nav>.nav-btn>label {
+          display: inline-block;
+          width: 50px;
+          height: 50px;
+          padding: 22px 10px;
+      }
 
+      .nav>.nav-btn>label:hover,
+      .nav #nav-check:checked~.nav-btn>label {
+          background-color: inherit;
+      }
 
-<!-- Sticky Section -->
-<section id="wrapper">
-  <div id="sticky" style="border: 2px solid #bc48ff;">
-    <svg id="edit-brightness" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                    <path id="Path_603" data-name="Path 603"
-                        d="M13,6a.75.75,0,0,1-.75-.75,1.5,1.5,0,0,0-1.5-1.5.75.75,0,0,1,0-1.5,1.5,1.5,0,0,0,1.5-1.5.75.75,0,0,1,1.5,0,1.5,1.5,0,0,0,1.5,1.5.75.75,0,0,1,0,1.5,1.5,1.5,0,0,0-1.5,1.5A.75.75,0,0,1,13,6Z"
-                        fill="var(--whiteColor)" />
-                    <path id="Path_604" data-name="Path 604"
-                        d="M6,16a1,1,0,0,1-1-1,4,4,0,0,0-4-4A1,1,0,1,1,1,9,4,4,0,0,0,5,5,1,1,0,0,1,7,5a4,4,0,0,0,4,4,1,1,0,0,1,0,2,4,4,0,0,0-4,4,1,1,0,0,1-1,1Z"
-                        fill="var(--whiteColor)" />
-                </svg>
-  </div>
-<!-- Inner Section -->
-<div class="gitic-sticky">
-<div class="flex-item-left">
-<img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/full_front_back.jpg" alt="this is image">
-</div>  
+      .nav>.nav-btn>label:hover,
+      .nav #nav-check:checked~.nav-btn>label,
+      label:focus {
+          transform: translateY(-.2rem);
+          text-decoration: none;
+      }
 
-<div class="flex-item-right">
-<h1><span style="color: #f83d23;">Yearly</span> Budget</h1>
-<p>
-The Gitic Budget is a comprehensive yearly allocation mechanism that supersedes the traditional token roadmap.
- It involves the strategic distribution of funds into various sectors within Gitic and its States chambers.
-  This dynamic budgeting approach ensures that financial resources are allocated efficiently to support
-   and nurture key initiatives, projects, and advancements within the Gitic ecosystem. By replacing the
-    older token roadmap, the Gitic Budget serves as a flexible and responsive financial blueprint, 
-    adapting to the evolving needs of the decentralized community and contributing to the sustainable growth of Gitic. 
-</p>
-</div>
-</div>
-<!-- /Inner Section -->
-</section>  
-<!-- /Sticky Section -->
+      .nav>.nav-btn>label>span {
+          display: block;
+          width: 30px;
+          height: 7px;
+          border-top: 2px solid var(--whiteColor);
+      }
 
+      .nav>.nav-links {
+          background: var(--background-1);
+          position: absolute;
+          display: block;
+          width: 100%;
+          height: 0px;
+          transition: all 0.3s ease-in;
+          overflow-y: hidden;
+          top: 50px;
+          left: 0px;
+      }
 
- <!-- Sticky Section -->
-<section id="wrapper" style="height: 450px;">
-  <div id="sticky" style="border: 2px solid #bc48ff;">
-    <svg id="edit-brightness" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                    <path id="Path_603" data-name="Path 603"
-                        d="M13,6a.75.75,0,0,1-.75-.75,1.5,1.5,0,0,0-1.5-1.5.75.75,0,0,1,0-1.5,1.5,1.5,0,0,0,1.5-1.5.75.75,0,0,1,1.5,0,1.5,1.5,0,0,0,1.5,1.5.75.75,0,0,1,0,1.5,1.5,1.5,0,0,0-1.5,1.5A.75.75,0,0,1,13,6Z"
-                        fill="var(--whiteColor)" />
-                    <path id="Path_604" data-name="Path 604"
-                        d="M6,16a1,1,0,0,1-1-1,4,4,0,0,0-4-4A1,1,0,1,1,1,9,4,4,0,0,0,5,5,1,1,0,0,1,7,5a4,4,0,0,0,4,4,1,1,0,0,1,0,2,4,4,0,0,0-4,4,1,1,0,0,1-1,1Z"
-                        fill="var(--whiteColor)" />
-                </svg>
-  </div>
-<!-- Inner Section -->
-<div class="gitic-sticky"> 
-<div class="flex-item-right">
-<h1><span style="color: #f83d23;">Discover</span> More</h1>
-<p>
-The Gitic Foundation serves as the organizational hub and driving force behind the Gitic ecosystem.
-Comprising developers, contributors, and visionaries, the Foundation is dedicated to advancing the
-principles of decentralization, innovation, and community empowerment within the blockchain space. 
-</p>
-</div>
+      .nav>.nav-links>a {
+          display: block;
+          width: 100%;
+      }
 
-<div class="flex-item-left">
-<a href="#foundation">Constitution</a>
-<a href="#foundation">Request Proposal</a>
-<a href="#foundation">Download Budget</a>
-</div> 
-</div>
-<!-- /Inner Section -->
-</section>  
+      .nav>#nav-check:not(:checked)~.nav-links {
+          height: 0px;
+      }
 
-<section class="extra"></section>
-<!-- /Sticky Section -->
+      .nav>#nav-check:checked~.nav-links {
+          height: calc(100vh - 50px);
+          overflow-y: auto;
+      }
+  }
 
-        
-        
+  /* Progress Line */
+  .progress-container {
+      width: 100%;
+      height: 1.2px;
+      z-index: 3;
+      margin-top: -17px;
+  }
 
+  .progress-bar {
+      height: 1px;
+      background: var(--lemonColor);
+      width: 0%;
+  }
 
+  /* Countdown */
+  #demo {
+      color: var(--whiteColor);
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
 
-
-            
-        
-         
-
-        <!-- Big Header Section -->
-        <section class="big-header">
-        <div class="container">
-            <h1>WHAT CAN YOU DO IN <span style="color: var(--violetredColor);">GITIC SPACE?</span></h1>
-       </div>
-     </section>
-     <!-- /Big Header Section -->
-
-
-
-      <!-- Tech/Gov Section -->
-            <div class="tech-gov">
-           <a href="#" class="flex-item-left">
-            <img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/full_front_back.jpg" alt="this is image">
-           </a>
-
-           <a href="#" class="flex-item-right">
-           <img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/full_front_back.jpg" alt="this is image">
-           </a>
-        </div>
-
-        <div class="tech-gov">
-            <a href="#" class="flex-item-left">
-             <img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/full_front_back.jpg" alt="this is image">
-            </a>
-        
-            <a href="#" class="flex-item-right">
-            <img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/full_front_back.jpg" alt="this is image">
-            </a>
-        </div>
-        <!-- /Tech/Gov Section -->
+  /* /NAV SECTION */
 
 
 
-        <!-- Programs -->
-<section class="programs">
-    <div class="content">
-        <h1>Frequently Asked Questions</h1>
-    </div>
-</section>
+#main-content {
+    width: 100%;
+    height: auto;
+}
 
-<div class="container">
-    <details class="accordion">
-        <summary class="accordion-header">
-            <div class="accordion-header-content">
-                <h2 class="accordion-header-content-title">1. What is Gitic</h2>
-            </div>
-        </summary>
-        <div class="accordion-content">
-            <p class="accordion-content-text">
-            Answer: Gitic is a decentralized governance project that aims to provide an open and neutral platform
-             for the governance of various blockchain networks. It introduces innovative concepts such as cross-chain
-              interoperability states concept, smart contract constitution, Citizenship, yearly budget, and a 
-              decentralized decision-making process.
-            </p>
-        </div>
-    </details>
-</div>
+.page {
+    display: none;
+    padding: 0px;
+    width: 100%;
+    height: 100vh;
+}
 
-<div class="container" id="nav-programs">
-    <details class="accordion">
-        <summary class="accordion-header">
-            <div class="accordion-header-content">
-                <h2 class="accordion-header-content-title">2. How does Gitic achieve cross-chain interoperability?</h2>
-            </div>
-        </summary>
-        <div class="accordion-content">
-            <p class="accordion-content-text">
-             Answer: Gitic achieves cross-chain interoperability by implementing states bridges and smart contracts that
-              facilitate the seamless movement of its native token (GITIC) between different blockchain networks.
-               This ensures users can transact and participate in governance activities across supported blockchains.
-            </p>
-        </div>
-    </details>
-</div>
+/*--- HOME SECTION ---*/
+#home {
+    display: block;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+}
 
-<div class="container">
-    <details class="accordion">
-        <summary class="accordion-header">
-            <div class="accordion-header-content">
-                <h2 class="accordion-header-content-title">3. What is the Smart Contract Constitution in Gitic</h2>
-            </div>
-        </summary>
-        <div class="accordion-content">
-            <p class="accordion-content-text">
-            Answer: The Smart Contract Constitution in Gitic refers to a novel concept where the governance activities
-             are executed through decentralized smart contract execution. This ensures transparency, immutability,
-              and accessibility to all participants in the Gitic ecosystem.
-            </p>
-        </div>
-    </details>
-</div>
+@media (max-width: 768px) {
+    /* Add responsive styles here */
+}
+/*--- /HOME SECTION ---*/
 
-<div class="container">
-    <details class="accordion">
-        <summary class="accordion-header">
-            <div class="accordion-header-content">
-                <h2 class="accordion-header-content-title">4. How can I become a citizen of Gitic?</h2>
-            </div>
-        </summary>
-        <div class="accordion-content">
-            <p class="accordion-content-text">
-            Answer: To become a citizen of Gitic, you need to be a member of one of the Gitic states (blockchain networks).
-             Citizenship is typically granted to state members, and citizens have the right to vote, propose changes, and
-              participate in Gitic's decentralized decision-making processes.
-            </p>
-        </div>
-    </details>
-</div>
 
-<div class="container">
-    <details class="accordion">
-        <summary class="accordion-header">
-            <div class="accordion-header-content">
-                <h2 class="accordion-header-content-title">5. What are Gitic states?</h2>
-            </div>
-        </summary>
-        <div class="accordion-content">
-            <p class="accordion-content-text">
-             Answer: Gitic states are various blockchain networks integrated into the Gitic decentralized governance system.
-              Each state represents a distinct blockchain platform such as Ethereum, Solana, Cardano, and more. Gitic aims
-               to unite users and citizens from different states under a common governance framework.
-            </p>
-        </div>
-    </details>
-</div>
+/* Hero Section Styles */
+.hero {
+    width: 100%;
+    height: 100vh;
+    padding: 20px 0px;
+}
 
-<div class="container">
-    <details class="accordion">
-        <summary class="accordion-header">
-            <div class="accordion-header-content">
-                <h2 class="accordion-header-content-title">6. How is the yearly budget allocated in Gitic?</h2>
-            </div>
-        </summary>
-        <div class="accordion-content">
-            <p class="accordion-content-text">
-            Answer: The yearly budget in Gitic is allocated to different fields such as space technology, software
-             technology, innovation grants, investment funding, and more. This new budgeting concept replaces traditional
-              token roadmaps and is designed to attract investors and foster innovation within the Gitic ecosystem.
-            </p>
-        </div>
-    </details>
-</div>
+.hero .content {
+    max-width: 1200px;
+    padding: 180px 0;
+    margin: 0 auto;
+    text-align: left;
+    margin-top: 20px;
+}
 
-<div class="container">
-    <details class="accordion">
-        <summary class="accordion-header">
-            <div class="accordion-header-content">
-                <h2 class="accordion-header-content-title">7. Can I propose changes to the Gitic governance system?</h2>
-            </div>
-        </summary>
-        <div class="accordion-content">
-            <p class="accordion-content-text">
-            Answer: Yes, as a citizen of Gitic, you have the right to propose changes to the governance system.
-             Proposals can cover various aspects, including amendments to the Smart Contract Constitution,
-              changes in budget allocations, and improvements to the overall Gitic ecosystem.
-            </p>
-        </div>
-    </details>
-</div>
+.hero .content .header-text {
+    color: var(--color-warning-light);
+    text-align: left;
+    max-width: 1200px;
+    font-size: 95px;
+    font-weight: 600;
+    line-height: 0.85;
+}
 
-<div class="container">
-    <details class="accordion">
-        <summary class="accordion-header">
-            <div class="accordion-header-content">
-                <h2 class="accordion-header-content-title">8. How is governance decision-making handled in Gitic?</h2>
-            </div>
-        </summary>
-        <div class="accordion-content">
-            <p class="accordion-content-text">
-            Answer: Governance decision-making in Gitic is open to all citizens. Only citizens have the right
-             to vote and participate in Gitic activities. Additionally, state members can vote within their
-              state using the state's native token, but to vote on Gitic governance, they must use both their
-               state native token and the Gitic governance token.
-            </p>
-        </div>
-    </details>
-</div>
 
-<div class="container">
-    <details class="accordion">
-        <summary class="accordion-header">
-            <div class="accordion-header-content">
-                <h2 class="accordion-header-content-title">9. What is the Gitic implementation roadmap?</h2>
-            </div>
-        </summary>
-        <div class="accordion-content">
-            <p class="accordion-content-text">
-            Answer: The Gitic implementation roadmap includes phases such as idea arrangement (2022), 
-            developing Gitic codes (2023), and launching on the testnet and presale (2024). 
-            The roadmap outlines the gradual development and deployment of Gitic's features and functionalities.
-            </p>
-        </div>
-    </details>
-</div>
 
-<div class="container">
-    <details class="accordion">
-        <summary class="accordion-header">
-            <div class="accordion-header-content">
-                <h2 class="accordion-header-content-title">10. How can I get involved in Gitic partnerships and collaborations?</h2>
-            </div>
-        </summary>
-        <div class="accordion-content">
-            <p class="accordion-content-text">
-            Answer: Partnerships and collaborations in Gitic are facilitated through proposals and voting by citizens.
-             The community actively participates in deciding which partnerships align with Gitic's goals and values.
-              Proposals for collaborations are subject to the democratic decision-making process within the Gitic governance system.
-            </p>
-            <a href="#join">
-                Apply Now
-            </a>
-        </div>
-    </details>
-</div>
-<!-- /Programs -->
+.hero .content a {
+      /* From https://css.glass */
+      background-color: var(--violetredColor);
+      border-radius: 16px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      border: 1px solid var(--violetredColor);
+      color: var(--color-danger-light);
+      font-size: 22px;
+      font-weight: 100;
+      display: inline-block;
+      text-decoration: none;
+      border-radius: 8px;
+      padding: 14px 30px;
+      float: center;
+      text-align: center;
+      margin-top: 25px;
+      gap: 5px;
+      transition: background-color 0.3s;
+  }
+
+  .hero .content a:hover,
+  a:focus {
+      transform: translateX(-.2rem);
+      text-decoration: none;
+  }
+
+/* Media query for screens smaller than 768px */
+@media (max-width: 768px) {
+    .hero .content {
+        max-width: 1000px;
+        padding: 560px 0;
+        margin-top: 200px;
+    }
+
+    .hero .content .header-text {
+        font-size: 45px;
+        font-weight: 600;
+        line-height: 2.8rem;
+    }
+
+    .hero .content p {
+        font-size: 20px;
+        max-width: 700px;
+        margin-bottom: 10px;
+    }
+
+    .hero .content {
+        padding: 30px;
+    }
+
+    .hero .content a {
+        font-size: 19px;
+        width: 100%;
+        padding: 11px;
+        margin: 0.3rem auto;
+    }
+}
+/* /Hero Section Styles */
+
+
+/* Gitic Rocket */
+header {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--background-2);
+    box-shadow: var(--box-shadow);
+    border-radius: 16px;
+    margin-top: 100px;
+}
+
+header h1 {
+    font-size: 40px;
+    margin: 0;
+}
+
+header p {
+    color: var(--color-warning-light);
+    font-size: 21px;
+    text-align: center;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+header {
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 20px; 
+}
+
+header h1 {
+    font-size: 45px;
+    margin: 0;
+}
+
+header p {
+    font-size: 17px;
+    text-align: center;
+    margin: 0;
+}
+}
+/* /Gitic Rocket */
+
+
+
+/* Foundation Section Styles */
+.flex-about {
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+  margin-top: 120px;
+}
+
+.flex-about .flex-item-left {
+  text-align: center;  
+   padding: 10px;
+  flex: 50%;
+}
+
+.flex-about .flex-item-right {
+  text-align: left;  
+  padding: 10px 0px;
+  flex: 50%;
+}
+
+.flex-about .flex-item-right h1 {
+    color: var(--color-warning-light);
+font-size: 95px;
+}
+
+.flex-about .flex-item-right p {
+font-size: 21px;
+max-width: 600px;
+}
+
+ .flex-about .flex-item-right a {
+      /* From https://css.glass */
+      background-color: var(--color-warning-light);
+      border-radius: 16px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      color: var(--background-1);
+      font-size: 22px;
+      font-weight: 100;
+      display: inline-block;
+      text-decoration: none;
+      border-radius: 8px;
+      padding: 12px 30px;
+      float: center;
+      text-align: center;
+      margin-top: 15px;
+      gap: 5px;
+      transition: background-color 0.3s;
+  }
+
+  .flex-about .flex-item-right a:hover,
+  a:focus {
+      transform: translateX(-.2rem);
+      text-decoration: none;
+  }
+
+/* Responsive layout - makes a one column-layout instead of two-column layout */
+@media (max-width: 768px) {
+  .flex-about {
+    flex-direction: column;
+    margin-top: 30px;
+    padding: 50px;
+  }
+
+  .flex-about {
+  margin: 20px;
+}
+
+.flex-about .flex-item-left img {
+  text-align: center;  
+  width: 350px;
+  height: auto;
+}
+
+  .flex-about .flex-item-right {
+   text-align: center;
+   padding: 20px;
+  }
+
+  .flex-about .flex-item-right h1 {
+    font-size: 45px;
+  }
+
+  .flex-about .flex-item-right p {
+    font-size: 17px;
+    max-width: 500px;
+  }
+
+  .flex-about .flex-item-right a {
+    font-size: 17px;
+    width: 100%;
+  }
+}
+/* /Foundation Section Styles */
+
+
+
+
+.flex-states {
+  display: flex;
+  flex-direction: row;
+  font-size: 21px;
+  margin: 20px;
+  margin-top: 100px;
+}
+
+.flex-states h1 {
+  padding: 5px 0px;
+}
+
+.flex-states .flex-item-left {
+  /* From https://css.glass */
+background: var(--background-2);
+box-shadow: var(--box-shadow);
+border-style: dashed;
+  padding: 10px;
+  flex: 50%;
+  margin: 10px;
+  border-radius: 15px;
+}
+
+.flex-states .flex-item-right {
+ /* From https://css.glass */
+background: var(--background-2);
+box-shadow: var(--box-shadow);
+border-style: dashed;
+  padding: 10px;
+  flex: 50%;
+   margin: 10px;
+   border-radius: 15px;
+}
+
+/* Responsive layout - makes a one column-layout instead of two-column layout */
+@media (max-width: 800px) {
+  .flex-states {
+    flex-direction: column;
+  }
+}
+
+
+
+
+
+.claim-card {
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .claim-card  h1 {
+     font-size: 50px;
+      color: var(--whiteColor);
+    }
+
+    .claim-card  p {
+      font-size: 21px;
+      color: var(--whiteColor);
+    }
+
+     .claim-card .countdown {
+        color: var(--whiteColor);
+      font-size: 24px;
+      margin-top: 20px;
+    }
+
+    .claim-card  button {
+      background-color: var(--whiteColor);
+      color: var(--background-2);
+      box-shadow: var(--box-shadow);
+      border-radius: 8px;
+      border: none;
+      padding: 12px 50px;
+      font-size: 21px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+/* Responsive layout - makes a one column-layout instead of two-column layout */
+@media (max-width: 768px) {
+  .flex-states {
+    flex-direction: column;
+  }
+
+  .claim-card  h1 {
+     font-size: 35px;
+    }
+
+    .claim-card  p {
+      font-size: 17px;
+    }
+
+     .claim-card .countdown {
+      font-size: 17pxpx;
+      margin-top: 20px;
+    }
+
+    .claim-card  button {
+      font-size: 17px;
+      box-shadow: var(--box-shadow);
+      color: var(--whiteColor);
+      border: none;
+      padding: 12px 50px;
+      font-size: 21px;
+      cursor: pointer;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+}
+
+
+
+
+
+    .presale-card {
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .presale-card h1 {
+        font-size: 50px;
+      color: var(--whiteColor);
+    }
+
+    .presale-card p {
+      color: var(--whiteColor);
+    }
+
+    .presale-card .countdown {
+        color: var(--whiteColor);
+      font-size: 24px;
+      margin-top: 20px;
+    }
+
+   .presale-card button {
+      background-color: var(--whiteColor);
+      color: var(--background-2);
+      border-radius: 8px;
+      padding: 13px 50px;
+      font-size: 21px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+
+
+/* Responsive layout - makes a one column-layout instead of two-column layout */
+@media (max-width: 800px) {
+  .flex-states {
+    flex-direction: column;
+  }
+
+  .presale-card {
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .presale-card h1 {
+        font-size: 35px;
+    }
+
+    .presale-card p {
+      font-size: 17px;
+    }
+
+    .presale-card .countdown {
+      font-size: 24px;
+      margin-top: 20px;
+    }
+
+   .presale-card button {
+      color: var(--whiteColor);
+      border: none;
+      padding: 15px 50px;
+      font-size: 17px;
+      cursor: pointer;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+}
+
+
+
+/* ANIMATION */
+#animation {
+    position: relative;
+    box-shadow: var(--bs-box-shadow);
+    overflow: hidden;
+}
+
+#animation span:nth-child(1) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, var(--mainColor),  var(--mainColor));
+    animation: animate1 2s linear infinite;
+}
+
+@keyframes animate1 {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+#animation span:nth-child(2) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 2px;
+    background: linear-gradient(to bottom,  var(--mainColor),  var(--mainColor));
+    animation: animate2 2s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes animate2 {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+#animation span:nth-child(3) {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to left,  var(--mainColor),  var(--mainColor));
+    animation: animate3 2s linear infinite;
+}
+
+@keyframes animate3 {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+#animation span:nth-child(4) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 2px;
+    background: linear-gradient(to top,  var(--mainColor),  var(--mainColor));
+    animation: animate4 2s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes animate4 {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(-100%);
+    }
+}
+/* / ANIMATION */
+
+
+/* LEARN */
+  .title {
+      width: 100%;
+      padding: 20px 0px;
+      margin-top: 100px;
+  }
+
+  .title .content {
+      max-width: 900px;
+      padding: 20px 0;
+      margin: 0 auto;
+      text-align: left;
+  }
+
+  .title .content h1 {
+      color: var(--color-warning-light);
+      text-align: center;
+      max-width: 900px;
+      font-size: 96px;
+      font-weight: 600;
+      line-height: 1;
+  }
+
+  .title .content p {
+      color: var(--backgroundColor);
+      text-align: center;
+      max-width: 900px;
+      padding: 10px 0px;
+  }
+
+  .title .content a {
+      /* From https://css.glass */
+      background-color: var(--blackColor);
+      border-radius: 16px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      color: var(--whiteColor);
+      font-size: 22px;
+      font-weight: 100;
+      display: inline-block;
+      text-decoration: none;
+      border-radius: 30px;
+      padding: 12px 30px;
+      float: center;
+      text-align: center;
+      margin-top: 15px;
+      gap: 5px;
+      transition: background-color 0.3s;
+  }
+
+  .title a:hover,
+  a:focus {
+      transform: translateX(-.2rem);
+      text-decoration: none;
+  }
+
+  /* Media query for screens smaller than 768px */
+  @media (max-width: 768px) {
+    .title {
+      max-width: 600px;
+  }
+
+      .title .content {
+          padding: 0px 0;
+      }
+
+      .title .content h1 {
+          font-size: 45px;
+          font-weight: 600;
+          max-width: 600px;
+      }
+
+
+      .title .content a {
+          font-size: 20px;
+          width: 100%;
+          padding: 11px;
+          margin: 0.3rem auto;
+      }
+  }
+
+
+
+
+/* Sticky Section Styles */
+#sticky {
+  position: sticky;
+  border-radius: 8px;
+  width: 40px;
+height: 50px;
+  top: 300px;
+  left: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.extra,
+#wrapper {
+  width: 100%;
+  margin: auto;
+  background-color: var(--background-2);
+}
+#wrapper {
+  height: 600px;
+}
+
+.extra {
+  height: 50px;
+}
+
+@media (min-height: 768px) {
+  #wrapper{
+    height: 2100px;
+  }
+}
+/* /Sticky Section Styles */
+
+
+
+/* StickyTools Section Styles */
+.gitic-sticky {
+    display: flex;
+    flex-direction: row;
+    padding: 0px 30px;
+}
+
+
+.gitic-sticky .flex-item-left {
+    text-align: center;
+    padding: 10px;
+    flex: 50%;
+    margin: 10px;
+}
+
+.gitic-sticky .flex-item-left img {
+    width: 100%;
+    height: 100hv;
+    border-radius: 20px;
+    margin: 0px;
+}
+
+.gitic-sticky .flex-item-right {
+    text-align: left;
+    padding: 10px;
+    flex: 50%;
+    margin: 10px;
+}
+
+.gitic-sticky .flex-item-right h1 {
+font-size: 50px;
+font-weight: 500;
+text-align: left;
+margin-top: 0px;
+}
+
+.gitic-sticky .flex-item-right p {
+font-size: 22px;
+text-align: left;
+}
+
+.gitic-sticky .flex-item-left a {
+     background-color: var(--whiteColor);
+     box-shadow: var(--box-shadow);
+     border-radius: 16px;
+     color: var(--mainColor);
+     font-size: 22px;
+     font-weight: 100;
+     display: inline-block;
+     text-decoration: none;
+     border-radius: 8px;
+     width: 100%;
+     padding: 12px;
+     text-align: center;
+     margin-top: 25px;
+     gap: 5px;
+     transition: background-color 0.3s;
+ }
+
+gitic-sticky .flex-item-left a:hover,
+ a:focus {
+     transform: translateX(-.2rem);
+     text-decoration: none;
+ }
+
+
+  gitic-sticky flex-item-left a {
+      /* From https://css.glass */
+      background-color: var(--color-warning-light);
+      border-radius: 16px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      color: var(--background-1);
+      font-size: 22px;
+      font-weight: 100;
+      display: inline-block;
+      text-decoration: none;
+      border-radius: 8px;
+      padding: 12px 30px;
+      float: center;
+      text-align: center;
+      margin-top: 15px;
+      gap: 5px;
+      transition: background-color 0.3s;
+  }
+
+  .flex-about .flex-item-right a:hover,
+  a:focus {
+      transform: translateX(-.2rem);
+      text-decoration: none;
+  }
+
+
+
+/* Responsive layout - makes a one column-layout instead of two-column layout */
+@media (max-width: 768px) {
+    .gitic-sticky {
+        flex-direction: column;
+    }
+
+ .gitic-sticky .flex-item-right img {
+  text-align: center;  
+  width: 350px;
+  height: auto;
+}
+
+    .gitic-sticky .flex-item-right h1 {
+font-size: 35px;
+font-weight: 600;
+}
+
+.gitic-sticky .flex-item-right p {
+font-size: 17px;
+text-align: left;
+}
+}
+/* /* StickyTools Section Styles */
+
+
+
+
+
+
+
+/* Tech/Gov Section Styles */
+.tech-gov {
+    display: flex;
+    flex-direction: row;
+    font-size: 30px;
+    text-align: center;
+    padding: 0px 30px;
+}
+
+.tech-gov img {
+    width: 100%;
+    height: 100hv;
+    border-radius: 20px;
+    margin: 0px;
+}
+
+.tech-gov .flex-item-left {
+    padding: 10px;
+    flex: 50%;
+    margin: 5px;
+    border-radius: 30px;
+}
+
+
+.tech-gov .flex-item-right {
+    padding: 10px;
+    flex: 50%;
+    margin: 10px;
+    border-radius: 15px;
+}
+
+/* Responsive layout - makes a one column-layout instead of two-column layout */
+@media (max-width: 768px) {
+    .tech-gov {
+        flex-direction: column;
+        padding: 0px 30px;
+        max-width: 600px;
+    }
+
+  .tech-gov img {
+  text-align: center;  
+  width: 450px;
+  height: auto;
+}
+}
+/* /Tech/Gov Section Styles */
+
+
+/* Big Header Section Styles */
+.big-header {
+    text-align: center;
+    width: 100%;
+    padding: 20px 0px;
+    margin-top: 100px;
+}
+
+.big-header .container {
+    max-width: 1200px;
+    padding: 20px 0;
+    text-align: left;
+}
+
+.big-header .container h1 {
+    color: var(--whiteColor);
+    font-family: sharp-medium-24;
+    max-width: 1100px;
+    font-size: 80px;
+    font-weight: 600;
+    letter-spacing: 1.09px;
+    line-height: 0.90;
+    text-align: left;
+}
+
+.big-header .container p {
+    color: var(--backgroundColor);
+    text-align: center;
+    max-width: 600px;
+    padding: 10px 0px;
+}
+
+.big-header .container a {
+    /* From https://css.glass */
+background: rgba(240, 255, 240, 1);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(6.7px);
+-webkit-backdrop-filter: blur(6.7px);
+border: 1px solid rgba(240, 255, 240, 0.48);
+    color: var(--blackColor);
+    font-size: 22px;
+    font-weight: 100;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 30px;
+    padding: 12px 30px;
+    float: center;
+    text-align: center;
+    margin-top: 15px;
+    gap: 5px;
+    transition: background-color 0.3s;
+}
+
+.big-header .container a:hover,
+a:focus {
+    transform: translateY(-.2rem);
+    text-decoration: none;
+}
+
+/* Media query for screens smaller than 768px */
+@media (max-width: 768px) {
+    .big-header .container {
+        padding: 50px 0;
+        margin-top: 0px;
+    }
+
+        .big-header .container h1 {
+        text-align: center;
+        font-size: 30px;
+        font-weight: 400;
+        max-width: 500px;
+        margin-top: 0px;
+    }
+
+        .big-header .container p {
+        font-size: 20px;
+        max-width: 700px;
+        margin-bottom: 10px;
+    }
+
+        .big-header .container {
+        padding: 30px;
+    }
+
+        .big-header .container a {
+        font-size: 20px;
+        width: 100%;
+        padding: 11px;
+        margin: 0.3rem auto;
+    }
+}
+/* /Big Header Section Styles */
+
+
+
+
+
+
+/* Add similar styles for Products, Team, and Testimonials sections as needed */
+
+@media (max-width: 768px) {
+
+    /* /Tech/Gov Section Styles */
+    /* Add responsive styles here */
+}
+
+
+
+
+/* Programs */
+.programs {
+    width: 100%;
+    padding: 20px 40px;
+    margin-top: 100px;
+}
+
+.programs .content {
+    max-width: 1200px;
+    padding: 20px 0;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.programs .content h1 {
+    color: var(--whiteColor);
+    max-width: 1200px;
+    font-size: 50px;
+    font-weight: 600;
+    margin-top: 0px;
+    line-height: 1;
+}
+
+.programs .content p {
+    color: var(--whiteLess);
+    text-align: left;
+    font-size: 20px;
+    max-width: 800px;
+    padding: 10px 0px;
+}
+
+/* Media query for screens smaller than 768px */
+@media (max-width: 768px) {
+    .programs .content {
+        padding: 50px 0;
+    }
+
+        .programs .content h1 {
+        font-size: 2.5rem;
+        font-weight: 600;
+        max-width: 700px;
+        margin-top: 50px;
+        line-height: 2.5rem;
+    }
+
+        .programs .content p {
+        font-size: 21px;
+        max-width: 700px;
+        margin-bottom: 20px;
+    }
+
+        .programs .content {
+        padding: 20px;
+    }
+}
+
+.container {
+    background: transparent;
+    padding: 5px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* accordion */
+.accordion {
+    border-radius: 3px;
+    width: 95%;
+    overflow: hidden;
+}
+
+.accordion-header {
+    background: transparent;
+    border-bottom: 1px solid var(--baseColor);
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.accordion-header:hover,
+.accordion-header:focus {
+    transform: translateY(-.2rem);
+    text-decoration: none;
+}
+
+.accordion-header-content {
+    padding: 10px;
+    overflow: hidden;
+    position: relative;
+    z-index: 9;
+}
+
+.accordion-content-text {
+    color: var(--whiteLess);
+    font-size: 20px;
+}
+
+.accordion-header-content-title {
+    color: var(--whiteLess);
+    font-size: 21px;
+    font-weight: 600;
+}
+
+.accordion-header-content-label {
+    font-size: 20px;
+    padding: 20px 0px;
+}
+
+
+.accordion-content {
+    color: var(--whiteLess)
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.accordion-content a {
+    font-size: 20px;
+    font-weight: 100;
+    display: inline-block;
+    color: var(--mainColor);
+    border: 2px solid var(--violetredColor);
+    box-shadow: var(--box-shadow);
+    border-radius: 8px;
+    text-decoration: none;
+    padding: 10px 20px;
+    text-align: center;
+    margin-top: 15px;
+    gap: 5px;
+    transition: background-color 0.3s;
+}
+
+.accordion-content a:hover,
+a:focus {
+    transform: translateY(-.2rem);
+    text-decoration: none;
+}
+/* accordion open effect */
+
+details summary {
+    cursor: pointer;
+    transition: all 225ms ease-out;
+    position: relative;
+}
+
+details[open] summary {
+    background: var(--pureBlack);
+    color: var(--white);
+    margin-bottom: 100px;
+    overflow: hidden;
+    position: relative;
+}
+
+details[open] .accordion-content {
+    padding: 10px;
+    margin-top: -100px;
+}
+
+details[open] .accordion-header-content-label {
+    color: var(--goldenYellow);
+}
+
+/* remove marker */
+
+details>summary {
+    list-style: none;
+}
+
+details>summary::-webkit-details-marker {
+    display: none;
+}
+
+/* custom marker */
+
+summary::after {
+    color: var(--violetredColor);
+    content: '+';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 26px;
+}
+
+details[open] summary::after {
+    color: var(--violetredColor);
+    content: '-';
+    font-size: 36px;
+}
+/* /Programs */
+
+
+
+
+
+
+/*--- FOOTER SECTION ---*/
+footer {
+    position: relative;
+    background: var(--mainColor);
+    width: 100%;
+    bottom: -380px;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0px;
+    width: 100%;
+    background: #000;
+}
+
+footer .content {
+    max-width: 1250px;
+    margin: auto;
+    padding: 40px 40px 40px 40px;
+}
+
+footer .content .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0px;
+}
+
+
+footer .content .link-boxes {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .content .link-boxes .box {
+    width: calc(100% / 5 - 10px);
+}
+
+.content .link-boxes .box .link_name {
+    color: #eee;
+    font-size: 18px;
+    font-weight: 0;
+    margin-bottom: 0px;
+    position: relative;
+}
+
+.link-boxes .box .link_name::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 2px;
+    width: 35px;
+    background: #fff;
+}
+
+.content .link-boxes .box li {
+    margin: 6px 0;
+    list-style: none;
+}
+
+.content .link-boxes .box li a {
+    color: #eee;
+    font-size: 15px;
+    text-decoration: none;
+    opacity: 0.8;
+    transition: all 0.4s ease
+}
+
+.content .link-boxes .box li a:hover {
+    transform: translateY(-.2rem);
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.content .link-boxes .input-box {
+    margin-right: 55px;
+}
+
+.link-boxes .input-box input {
+    height: 40px;
+    width: calc(100% + 55px);
+    outline: none;
+    border: 2px solid #AFAFB6;
+    background: #140B5C;
+    border-radius: 4px;
+    padding: 0 15px;
+    font-size: 15px;
+    color: #fff;
+    margin-top: 5px;
+}
+
+.link-boxes .input-box input::placeholder {
+    color: #AFAFB6;
+    font-size: 16px;
+}
+
+.link-boxes .input-box input[type="button"] {
+    background: #fff;
+    color: #140B5C;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 4px 0;
+    opacity: 0.8;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.input-box input[type="button"]:hover {
+    opacity: 1;
+}
+
+footer .bottom-details {
+    width: 100%;
+    background: #2c303a;
+}
+
+footer .bottom-details .bottom_text {
+    max-width: 1250px;
+    margin: auto;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottom-details .bottom_text span,
+.bottom-details .bottom_text a {
+    font-size: 14px;
+    font-weight: 300;
+    color: #fff;
+    opacity: 0.8;
+    text-decoration: none;
+}
+
+.bottom-details .bottom_text a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.bottom-details .bottom_text a {
+    margin-right: 10px;
+}
+
+@media (max-width: 900px) {
+    footer .content .link-boxes {
+        flex-wrap: wrap;
+    }
+
+    footer .content .link-boxes .input-box {
+        width: 40%;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 700px) {
+    footer {
+        position: relative;
+    }
+
+    .content .top .media-icons a {
+        height: 35px;
+        width: 35px;
+        font-size: 14px;
+        line-height: 35px;
+    }
+
+    footer .content .link-boxes .box {
+        width: calc(100% / 3 - 10px);
+    }
+
+    footer .content .link-boxes .input-box {
+        width: 60%;
+    }
+
+    .bottom-details .bottom_text span,
+    .bottom-details .bottom_text a {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 520px) {
+    footer::before {
+        top: 145px;
+    }
+
+    footer .content .top {
+        flex-direction: column;
+    }
+
+    .content .top .media-icons {
+        margin-top: 5px;
+    }
+
+    footer .content .link-boxes .box {
+        width: calc(100% / 2 - 10px);
+    }
+
+    footer .content .link-boxes .input-box {
+        width: 100%;
+    }
+}
+
+/*--- /FOOTER SECTION ---*/
+
 
 
 
