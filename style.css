@@ -305,7 +305,7 @@
 
       .hero .container {
           max-width: 1000px;
-          padding: 90px 0px;
+          padding: 100px 0px;
       }
 
       .hero h1 {
@@ -321,7 +321,7 @@
       }
 
       .hero a {
-          font-size: 18px;
+          font-size: 17px;
           width: 100%;
           padding: 11px;
           margin: 0.3rem auto;
