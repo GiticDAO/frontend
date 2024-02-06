@@ -35,8 +35,7 @@
             <input type="checkbox" id="nav-check">
             <div class="nav-header">
                 <div class="nav-title">
-                    <span><img src="https://cdn.ethancopping.com/codepen/Interactive%20Dual%20Hover%20Card/proxmox.png"
-                            width="30" height="30"></span>
+                    <span><img src="https://cdn.ethancopping.com/codepen/Interactive%20Dual%20Hover%20Card/proxmox.png"></span>
                 </div>
             </div>
             <div class="nav-btn">
@@ -52,7 +51,7 @@
                 <a href="#nav-governance">Budget</a>
                 <a href="#">Docs</a>
                 <a href="#bank" class="reserve-btn"
-                    style="border: 2px solid var(--baseColor); box-shadow: var(--box-shadow); border-radius: 8px; font-size: 20px; font-weight: 500; color: var(--background); padding: 7px 15px; margin-right: 10px;">
+                    style="border: 2px solid var(--baseColor-1); box-shadow: var(--box-shadow); border-radius: 8px; font-size: 20px; font-weight: 500; color: var(--whiteColor); padding: 7px 15px; margin-right: 10px;">
                     <svg class="w-6 h-6 text-gray-800 dark:text-white" height="20" width="20" aria-hidden="true"
                         xmlns="http://www.w3.org/2000/svg" fill="var(--violetredColor)" viewBox="0 0 20 20">
                         <path
@@ -77,57 +76,507 @@
 
 
             <!-- Hero Section -->
-            <section class="hero">
-                <div class="container">
-                <h1>Where <span style="color: var(--violetredColor);">Blockchain</span> States Unite for Decentralized Empowerment.</h1>
-                <p>
-                    Empower the future of decentralized of blockchain states, smart contract constitution,
-                    yearly budget, and citizenship on bold decision-making.
-                </p>
-                <a href="#about">Grantpaper
+              <section class="hero">
+            <div class="content">
+                <p class="header-text">Where <span style="color: var(--violetredColor);">Blockchain</span> States Unite for Decentralized Empowerment.</p>
+                    <a href="#about">Grantpaper
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                         stroke-width="1" stroke-linecap="butt" stroke-linejoin="round">
                         <path d="M3 15v4c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2v-4M17 9l-5 5-5-5M12 12.8V2.5" />
                     </svg>
                 </a>
-                <a href="#about" style="background-color: transparent; color: var(--mainColor); border: 2px solid var(--baseColor);">
-                    Apply Ambassador
+                <a href="#about" style="background-color: transparent; color: var(--whiteColor); border: 2px solid var(--baseColor-1);">
+                    Explore Gitic
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                         stroke-width="1" stroke-linecap="butt" stroke-linejoin="round">
                         <path d="M7 17l9.2-9.2M17 17V7H7" />
                     </svg>
                 </a>
-                </div>
-            </section>
+            </div>
+        </section>
             <!-- /Hero Section -->
 
+
+
+            <!-- Gitic Rocket Section -->
+        <section class="extra" style="background-color: transparent;">
+                <header>
+                    <p>Welcome to the Future of Decentralized Governance
+                        <a href="#" style="color: var(--violetredColor); text-decoration: none;">
+                        Gitic Token IGO</a> Presale Explorer 🚀
+                    </p>
+                </header>
+            </section>
+        <!-- /Gitic Rocket Section -->
+
+
+
+            <!-- Foundation Section -->
+                 <div class="flex-about">
+  <div class="flex-item-left">
+    <img src="https://cdn.ethancopping.com/codepen/Interactive%20Dual%20Hover%20Card/proxmox.png" width="450" height="450">  
+  </div>
+  <div class="flex-item-right">
+    <h1>Foundation</h1>
+    <p>
+    The Gitic Foundation serves as the organizational hub and driving force behind the Gitic ecosystem.
+     Comprising developers, contributors, and visionaries, the Foundation is dedicated to advancing the
+      principles of decentralization, innovation, and community empowerment within the blockchain space.
+       As the architects of Gitic's revolutionary journey, the Foundation oversees the development, 
+       governance, and collaborative initiatives that propel the project forward. It fosters a global
+        community engaged in diverse activities, from coding and governance decisions to innovative 
+        projects spanning various technological fields.    
+    </p>
+    <a href="#foundation">
+        Join Foundation
+        </a>
+  </div>
+</div>
+        <!-- Foundation Section -->
+
+
+
+
+
+
+        <div class="flex-states">
+  <div class="flex-item-left">
+<div class="claim-card">
+  <h1>Gitic Airdrop Claim</h1>
+  <p>Claim your free GITIC tokens now!</p>
+  <div class="countdown" id="countdown">GITIC 70% for Community</div>
+  <button onclick="claimAirdrop()">
+    Claim Airdrop
+</button>
+</div>
+  </div>
+
+  <div class="flex-item-right">
+<div class="presale-card">
+  <h1>Gitic Presale</h1>
+  <p>Participate in the GITIC token presale and let reshape together!</p>
+  <div class="countdown" id="countdown">Presale ends in: 10 days 05:30:20</div>
+  <button onclick="joinPresale()">
+    Join Presale
+</button>
+</div>
+  </div>
+</div>
+
+
+
+
+
+        <section class="title">
+                <div class="content">
+                    <h1>Smart Governance</h1>
+                </div>
+            </section>
+
+
+
+<!-- Sticky Section -->
+<section class="extra"></section>
+<section id="wrapper">
+  <div id="sticky" style="border: 2px solid #bc48ff;">
+    <svg id="edit-brightness" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                    <path id="Path_603" data-name="Path 603"
+                        d="M13,6a.75.75,0,0,1-.75-.75,1.5,1.5,0,0,0-1.5-1.5.75.75,0,0,1,0-1.5,1.5,1.5,0,0,0,1.5-1.5.75.75,0,0,1,1.5,0,1.5,1.5,0,0,0,1.5,1.5.75.75,0,0,1,0,1.5,1.5,1.5,0,0,0-1.5,1.5A.75.75,0,0,1,13,6Z"
+                        fill="var(--whiteColor)" />
+                    <path id="Path_604" data-name="Path 604"
+                        d="M6,16a1,1,0,0,1-1-1,4,4,0,0,0-4-4A1,1,0,1,1,1,9,4,4,0,0,0,5,5,1,1,0,0,1,7,5a4,4,0,0,0,4,4,1,1,0,0,1,0,2,4,4,0,0,0-4,4,1,1,0,0,1-1,1Z"
+                        fill="var(--whiteColor)" />
+                </svg>
+  </div>
+<!-- Inner Section -->
+<div class="gitic-sticky">
+<div class="flex-item-right">
+<h1><span style="color: #bc48ff;">Smart</span> Contract Constitution</h1>
+<p>
+The Gitic smart contract Constitution refers to a set of rules, principles, and guidelines that govern
+ the decentralized governance project named Gitic. In the context of blockchain and decentralized platforms,
+  a constitution outlines the structure and processes by which the project operates, makes decisions, and
+   involves its community members. A Gitic smart contract Constitution aims to provide a clear and
+    transparent framework for governance, ensuring that decision-making processes align with the
+     project's principles and goals. It serves as a foundational document that guides the decentralized
+      governance of the Gitic ecosystem.
+</p>
+</div>
+<div class="flex-item-left">
+<img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/full_front_back.jpg" alt="this is image">
+</div>   
+</div>
+<!-- /Inner Section -->
+</section>  
+<!-- /Sticky Section -->
+
+<!-- Sticky Section -->
+<section id="wrapper">
+  <div id="sticky" style="border: 2px solid #bc48ff;">
+    <svg id="edit-brightness" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                    <path id="Path_603" data-name="Path 603"
+                        d="M13,6a.75.75,0,0,1-.75-.75,1.5,1.5,0,0,0-1.5-1.5.75.75,0,0,1,0-1.5,1.5,1.5,0,0,0,1.5-1.5.75.75,0,0,1,1.5,0,1.5,1.5,0,0,0,1.5,1.5.75.75,0,0,1,0,1.5,1.5,1.5,0,0,0-1.5,1.5A.75.75,0,0,1,13,6Z"
+                        fill="var(--whiteColor)" />
+                    <path id="Path_604" data-name="Path 604"
+                        d="M6,16a1,1,0,0,1-1-1,4,4,0,0,0-4-4A1,1,0,1,1,1,9,4,4,0,0,0,5,5,1,1,0,0,1,7,5a4,4,0,0,0,4,4,1,1,0,0,1,0,2,4,4,0,0,0-4,4,1,1,0,0,1-1,1Z"
+                        fill="var(--whiteColor)" />
+                </svg>
+  </div>
+<!-- Inner Section -->
+<div class="gitic-sticky">
+<div class="flex-item-left">
+<img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/full_front_back.jpg" alt="this is image">
+</div>  
+
+<div class="flex-item-right">
+<h1><span style="color: #f83d23;">States</span> Blockchain Networks</h1>
+<p>
+Gitic's states are various blockchain networks that are integrated into the Gitic decentralized governance system.
+ Each of these integrated blockchains can be considered as "state" within the Gitic network. These states may include
+  well-known blockchain networks like Ethereum, Solana, Cardano, and others. The states could signify the individual
+   entities or instances of blockchain networks that participate in the broader Gitic ecosystem. Gitic aims to
+    provide decentralized governance that spans across multiple states, allowing users and citizens from different
+     blockchain networks to participate in the governance processes of the Gitic protocol.
+</p>
+</div>
+</div>
+<!-- /Inner Section -->
+</section>  
+<!-- /Sticky Section -->
+
+
+<!-- Sticky Section -->
+<section id="wrapper">
+  <div id="sticky" style="border: 2px solid #bc48ff;">
+    <svg id="edit-brightness" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                    <path id="Path_603" data-name="Path 603"
+                        d="M13,6a.75.75,0,0,1-.75-.75,1.5,1.5,0,0,0-1.5-1.5.75.75,0,0,1,0-1.5,1.5,1.5,0,0,0,1.5-1.5.75.75,0,0,1,1.5,0,1.5,1.5,0,0,0,1.5,1.5.75.75,0,0,1,0,1.5,1.5,1.5,0,0,0-1.5,1.5A.75.75,0,0,1,13,6Z"
+                        fill="var(--whiteColor)" />
+                    <path id="Path_604" data-name="Path 604"
+                        d="M6,16a1,1,0,0,1-1-1,4,4,0,0,0-4-4A1,1,0,1,1,1,9,4,4,0,0,0,5,5,1,1,0,0,1,7,5a4,4,0,0,0,4,4,1,1,0,0,1,0,2,4,4,0,0,0-4,4,1,1,0,0,1-1,1Z"
+                        fill="var(--whiteColor)" />
+                </svg>
+  </div>
+<!-- Inner Section -->
+<div class="gitic-sticky">
+<div class="flex-item-right">
+<h1><span style="color: #bc48ff;">Gitic</span> Citizenship</h1>
+<p>
+Gitic Citizenship is a pivotal aspect of the Gitic ecosystem, offering individuals a decentralized identity
+ within the various Gitic states across blockchain networks. It provides citizens with unique opportunities
+  and privileges, emphasizing freedom, participation, and engagement in the decentralized governance and
+   activities facilitated by Gitic. As a decentralized ID, Gitic Citizenship empowers users to actively
+    contribute to the decision-making processes, propose initiatives, and exercise their rights within the Gitic ecosystem.
+</p>
+</div>
+<div class="flex-item-left">
+<img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/full_front_back.jpg" alt="this is image">
+</div>   
+</div>
+<!-- /Inner Section -->
+</section>  
+<!-- /Sticky Section -->
+
+
+<!-- Sticky Section -->
+<section id="wrapper">
+  <div id="sticky" style="border: 2px solid #bc48ff;">
+    <svg id="edit-brightness" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                    <path id="Path_603" data-name="Path 603"
+                        d="M13,6a.75.75,0,0,1-.75-.75,1.5,1.5,0,0,0-1.5-1.5.75.75,0,0,1,0-1.5,1.5,1.5,0,0,0,1.5-1.5.75.75,0,0,1,1.5,0,1.5,1.5,0,0,0,1.5,1.5.75.75,0,0,1,0,1.5,1.5,1.5,0,0,0-1.5,1.5A.75.75,0,0,1,13,6Z"
+                        fill="var(--whiteColor)" />
+                    <path id="Path_604" data-name="Path 604"
+                        d="M6,16a1,1,0,0,1-1-1,4,4,0,0,0-4-4A1,1,0,1,1,1,9,4,4,0,0,0,5,5,1,1,0,0,1,7,5a4,4,0,0,0,4,4,1,1,0,0,1,0,2,4,4,0,0,0-4,4,1,1,0,0,1-1,1Z"
+                        fill="var(--whiteColor)" />
+                </svg>
+  </div>
+<!-- Inner Section -->
+<div class="gitic-sticky">
+<div class="flex-item-left">
+<img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/full_front_back.jpg" alt="this is image">
+</div>  
+
+<div class="flex-item-right">
+<h1><span style="color: #f83d23;">Yearly</span> Budget</h1>
+<p>
+The Gitic Budget is a comprehensive yearly allocation mechanism that supersedes the traditional token roadmap.
+ It involves the strategic distribution of funds into various sectors within Gitic and its States chambers.
+  This dynamic budgeting approach ensures that financial resources are allocated efficiently to support
+   and nurture key initiatives, projects, and advancements within the Gitic ecosystem. By replacing the
+    older token roadmap, the Gitic Budget serves as a flexible and responsive financial blueprint, 
+    adapting to the evolving needs of the decentralized community and contributing to the sustainable growth of Gitic. 
+</p>
+</div>
+</div>
+<!-- /Inner Section -->
+</section>  
+<!-- /Sticky Section -->
+
+
+ <!-- Sticky Section -->
+<section id="wrapper" style="height: 450px;">
+  <div id="sticky" style="border: 2px solid #bc48ff;">
+    <svg id="edit-brightness" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                    <path id="Path_603" data-name="Path 603"
+                        d="M13,6a.75.75,0,0,1-.75-.75,1.5,1.5,0,0,0-1.5-1.5.75.75,0,0,1,0-1.5,1.5,1.5,0,0,0,1.5-1.5.75.75,0,0,1,1.5,0,1.5,1.5,0,0,0,1.5,1.5.75.75,0,0,1,0,1.5,1.5,1.5,0,0,0-1.5,1.5A.75.75,0,0,1,13,6Z"
+                        fill="var(--whiteColor)" />
+                    <path id="Path_604" data-name="Path 604"
+                        d="M6,16a1,1,0,0,1-1-1,4,4,0,0,0-4-4A1,1,0,1,1,1,9,4,4,0,0,0,5,5,1,1,0,0,1,7,5a4,4,0,0,0,4,4,1,1,0,0,1,0,2,4,4,0,0,0-4,4,1,1,0,0,1-1,1Z"
+                        fill="var(--whiteColor)" />
+                </svg>
+  </div>
+<!-- Inner Section -->
+<div class="gitic-sticky"> 
+<div class="flex-item-right">
+<h1><span style="color: #f83d23;">Discover</span> More</h1>
+<p>
+The Gitic Foundation serves as the organizational hub and driving force behind the Gitic ecosystem.
+Comprising developers, contributors, and visionaries, the Foundation is dedicated to advancing the
+principles of decentralization, innovation, and community empowerment within the blockchain space. 
+</p>
+</div>
+
+<div class="flex-item-left">
+<a href="#foundation">Constitution</a>
+<a href="#foundation">Request Proposal</a>
+<a href="#foundation">Download Budget</a>
+</div> 
+</div>
+<!-- /Inner Section -->
+</section>  
+
+<section class="extra"></section>
+<!-- /Sticky Section -->
+
+        
+        
+
+
+
+
             
-            <!-- Tech/Gov Section -->
+        
+         
+
+        <!-- Big Header Section -->
+        <section class="big-header">
+        <div class="container">
+            <h1>WHAT CAN YOU DO IN <span style="color: var(--violetredColor);">GITIC SPACE?</span></h1>
+       </div>
+     </section>
+     <!-- /Big Header Section -->
+
+
+
+      <!-- Tech/Gov Section -->
             <div class="tech-gov">
            <a href="#" class="flex-item-left">
-            <img src="https://cdn.ethancopping.com/codepen/Interactive%20Dual%20Hover%20Card/proxmox.png" width="300" height="300">
+            <img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/full_front_back.jpg" alt="this is image">
            </a>
 
            <a href="#" class="flex-item-right">
-            <img src="https://cdn.ethancopping.com/codepen/Interactive%20Dual%20Hover%20Card/proxmox.png" width="300" height="300">
-           </div>
-        </a>
+           <img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/full_front_back.jpg" alt="this is image">
+           </a>
+        </div>
 
         <div class="tech-gov">
             <a href="#" class="flex-item-left">
-                <img src="https://cdn.ethancopping.com/codepen/Interactive%20Dual%20Hover%20Card/proxmox.png" width="300"
-                    height="300">
+             <img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/full_front_back.jpg" alt="this is image">
             </a>
         
             <a href="#" class="flex-item-right">
-                <img src="https://cdn.ethancopping.com/codepen/Interactive%20Dual%20Hover%20Card/proxmox.png" width="300"
-                    height="300">
+            <img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/full_front_back.jpg" alt="this is image">
             </a>
         </div>
         <!-- /Tech/Gov Section -->
-         
 
-            <a href="#foundation">Grantpaper</a>
+
+
+        <!-- Programs -->
+<section class="programs">
+    <div class="content">
+        <h1>Frequently Asked Questions</h1>
+    </div>
+</section>
+
+<div class="container">
+    <details class="accordion">
+        <summary class="accordion-header">
+            <div class="accordion-header-content">
+                <h2 class="accordion-header-content-title">1. What is Gitic</h2>
+            </div>
+        </summary>
+        <div class="accordion-content">
+            <p class="accordion-content-text">
+            Answer: Gitic is a decentralized governance project that aims to provide an open and neutral platform
+             for the governance of various blockchain networks. It introduces innovative concepts such as cross-chain
+              interoperability states concept, smart contract constitution, Citizenship, yearly budget, and a 
+              decentralized decision-making process.
+            </p>
+        </div>
+    </details>
+</div>
+
+<div class="container" id="nav-programs">
+    <details class="accordion">
+        <summary class="accordion-header">
+            <div class="accordion-header-content">
+                <h2 class="accordion-header-content-title">2. How does Gitic achieve cross-chain interoperability?</h2>
+            </div>
+        </summary>
+        <div class="accordion-content">
+            <p class="accordion-content-text">
+             Answer: Gitic achieves cross-chain interoperability by implementing states bridges and smart contracts that
+              facilitate the seamless movement of its native token (GITIC) between different blockchain networks.
+               This ensures users can transact and participate in governance activities across supported blockchains.
+            </p>
+        </div>
+    </details>
+</div>
+
+<div class="container">
+    <details class="accordion">
+        <summary class="accordion-header">
+            <div class="accordion-header-content">
+                <h2 class="accordion-header-content-title">3. What is the Smart Contract Constitution in Gitic</h2>
+            </div>
+        </summary>
+        <div class="accordion-content">
+            <p class="accordion-content-text">
+            Answer: The Smart Contract Constitution in Gitic refers to a novel concept where the governance activities
+             are executed through decentralized smart contract execution. This ensures transparency, immutability,
+              and accessibility to all participants in the Gitic ecosystem.
+            </p>
+        </div>
+    </details>
+</div>
+
+<div class="container">
+    <details class="accordion">
+        <summary class="accordion-header">
+            <div class="accordion-header-content">
+                <h2 class="accordion-header-content-title">4. How can I become a citizen of Gitic?</h2>
+            </div>
+        </summary>
+        <div class="accordion-content">
+            <p class="accordion-content-text">
+            Answer: To become a citizen of Gitic, you need to be a member of one of the Gitic states (blockchain networks).
+             Citizenship is typically granted to state members, and citizens have the right to vote, propose changes, and
+              participate in Gitic's decentralized decision-making processes.
+            </p>
+        </div>
+    </details>
+</div>
+
+<div class="container">
+    <details class="accordion">
+        <summary class="accordion-header">
+            <div class="accordion-header-content">
+                <h2 class="accordion-header-content-title">5. What are Gitic states?</h2>
+            </div>
+        </summary>
+        <div class="accordion-content">
+            <p class="accordion-content-text">
+             Answer: Gitic states are various blockchain networks integrated into the Gitic decentralized governance system.
+              Each state represents a distinct blockchain platform such as Ethereum, Solana, Cardano, and more. Gitic aims
+               to unite users and citizens from different states under a common governance framework.
+            </p>
+        </div>
+    </details>
+</div>
+
+<div class="container">
+    <details class="accordion">
+        <summary class="accordion-header">
+            <div class="accordion-header-content">
+                <h2 class="accordion-header-content-title">6. How is the yearly budget allocated in Gitic?</h2>
+            </div>
+        </summary>
+        <div class="accordion-content">
+            <p class="accordion-content-text">
+            Answer: The yearly budget in Gitic is allocated to different fields such as space technology, software
+             technology, innovation grants, investment funding, and more. This new budgeting concept replaces traditional
+              token roadmaps and is designed to attract investors and foster innovation within the Gitic ecosystem.
+            </p>
+        </div>
+    </details>
+</div>
+
+<div class="container">
+    <details class="accordion">
+        <summary class="accordion-header">
+            <div class="accordion-header-content">
+                <h2 class="accordion-header-content-title">7. Can I propose changes to the Gitic governance system?</h2>
+            </div>
+        </summary>
+        <div class="accordion-content">
+            <p class="accordion-content-text">
+            Answer: Yes, as a citizen of Gitic, you have the right to propose changes to the governance system.
+             Proposals can cover various aspects, including amendments to the Smart Contract Constitution,
+              changes in budget allocations, and improvements to the overall Gitic ecosystem.
+            </p>
+        </div>
+    </details>
+</div>
+
+<div class="container">
+    <details class="accordion">
+        <summary class="accordion-header">
+            <div class="accordion-header-content">
+                <h2 class="accordion-header-content-title">8. How is governance decision-making handled in Gitic?</h2>
+            </div>
+        </summary>
+        <div class="accordion-content">
+            <p class="accordion-content-text">
+            Answer: Governance decision-making in Gitic is open to all citizens. Only citizens have the right
+             to vote and participate in Gitic activities. Additionally, state members can vote within their
+              state using the state's native token, but to vote on Gitic governance, they must use both their
+               state native token and the Gitic governance token.
+            </p>
+        </div>
+    </details>
+</div>
+
+<div class="container">
+    <details class="accordion">
+        <summary class="accordion-header">
+            <div class="accordion-header-content">
+                <h2 class="accordion-header-content-title">9. What is the Gitic implementation roadmap?</h2>
+            </div>
+        </summary>
+        <div class="accordion-content">
+            <p class="accordion-content-text">
+            Answer: The Gitic implementation roadmap includes phases such as idea arrangement (2022), 
+            developing Gitic codes (2023), and launching on the testnet and presale (2024). 
+            The roadmap outlines the gradual development and deployment of Gitic's features and functionalities.
+            </p>
+        </div>
+    </details>
+</div>
+
+<div class="container">
+    <details class="accordion">
+        <summary class="accordion-header">
+            <div class="accordion-header-content">
+                <h2 class="accordion-header-content-title">10. How can I get involved in Gitic partnerships and collaborations?</h2>
+            </div>
+        </summary>
+        <div class="accordion-content">
+            <p class="accordion-content-text">
+            Answer: Partnerships and collaborations in Gitic are facilitated through proposals and voting by citizens.
+             The community actively participates in deciding which partnerships align with Gitic's goals and values.
+              Proposals for collaborations are subject to the democratic decision-making process within the Gitic governance system.
+            </p>
+            <a href="#join">
+                Apply Now
+            </a>
+        </div>
+    </details>
+</div>
+<!-- /Programs -->
+
+
+
 
 
     <!--- FOOTER SECTION --->
