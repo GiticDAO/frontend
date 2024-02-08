@@ -1,3 +1,13 @@
+ function openNav() {
+  document.getElementById("mySidepanel").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("mySidepanel").style.width = "0";
+}
+ 
+ 
+ 
  let slideIndex = 0;
 const cards = document.getElementsByClassName('slide-card');
 
@@ -14,6 +24,11 @@ function showNextCard() {
 }
 
 showNextCard();
+
+
+
+
+
 
 
 
