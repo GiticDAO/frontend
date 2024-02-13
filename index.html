@@ -10,24 +10,62 @@
 
 <body>
 
-<!-- Nav -->
-<div id="mySidepanel" class="sidepanel">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-  <a href="#">Grantpaper</a>
-  <a href="#">Budget 2024</a>
-  <a href="#">Foundation</a>
-  <a href="#">Ambassadors</a>
+ <!-- Nav -->
+<section class="nav-cover">
+    <!------Alerts------->
+    <div class="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <p class="tag rounded">
+        <svg id="edit-brightness" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+          <path id="Path_603" data-name="Path 603"
+            d="M13,6a.75.75,0,0,1-.75-.75,1.5,1.5,0,0,0-1.5-1.5.75.75,0,0,1,0-1.5,1.5,1.5,0,0,0,1.5-1.5.75.75,0,0,1,1.5,0,1.5,1.5,0,0,0,1.5,1.5.75.75,0,0,1,0,1.5,1.5,1.5,0,0,0-1.5,1.5A.75.75,0,0,1,13,6Z"
+            fill="var(--light)"/>
+          <path id="Path_604" data-name="Path 604"
+            d="M6,16a1,1,0,0,1-1-1,4,4,0,0,0-4-4A1,1,0,1,1,1,9,4,4,0,0,0,5,5,1,1,0,0,1,7,5a4,4,0,0,0,4,4,1,1,0,0,1,0,2,4,4,0,0,0-4,4,1,1,0,0,1-1,1Z"
+            fill="var(--light)" />
+        </svg>
+        v3.1 released <span id="demo"></span> <a href="#">&nearr;</a>
+      </p>
+    </div>
+    <!------/Alerts------>
+<div id="nav" class="nav">
+    <input type="checkbox" id="nav-check">
+    <div class="nav-header">
+        <div class="nav-title">
+        <span><img src="https://cdn.ethancopping.com/codepen/Interactive%20Dual%20Hover%20Card/proxmox.png" width="30"
+                height="30"></span>
+        </div>
+    </div>
+    <div class="nav-btn">
+        <label for="nav-check">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+    </div>
+    <div class="nav-links">
+        <a href="#nav-about">Grantpaper</a>
+        <a href="#nav-ecosystem">Constitution</a>
+        <a href="#nav-governance">Budget</a>
+        <a href="#">Docs</a>
+        <a href="#bank" class="reserve-btn"
+            style="border: 2px solid var(--baseColor); border-radius: 8px; font-size: 20px; font-weight: 500; color: var(--background); padding: 7px 15px; margin-right: 10px;">
+            <svg class="w-6 h-6 text-gray-800 dark:text-white" height="20" width="20" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" fill="var(--violetredColor)" viewBox="0 0 20 20">
+                <path
+                    d="M11.074 4 8.442.408A.95.95 0 0 0 7.014.254L2.926 4h8.148ZM9 13v-1a4 4 0 0 1 4-4h6V6a1 1 0 0 0-1-1H1a1 1 0 0 0-1 1v13a1 1 0 0 0 1 1h17a1 1 0 0 0 1-1v-2h-6a4 4 0 0 1-4-4Z" />
+                <path
+                    d="M19 10h-6a2 2 0 0 0-2 2v1a2 2 0 0 0 2 2h6a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1Zm-4.5 3.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2ZM12.62 4h2.78L12.539.41a1.086 1.086 0 1 0-1.7 1.352L12.62 4Z" />
+            </svg>
+        </a>
+        </div>
+    <!-- progress bar -->
+    <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+    </div>
+    <!-- /progress bar -->
 </div>
-
-<div class="nav-cover">
-<img src="https://cdn.ethancopping.com/codepen/Interactive%20Dual%20Hover%20Card/proxmox.png" width="40" height="40">
-
-<button class="openbtn" onclick="openNav()">
-<svg class="w-6 h-6 text-gray-800 dark:text-white" height="30" width="30" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="var(--whiteColor)" viewBox="0 0 24 24">
-    <path fill-rule="evenodd" d="M4.9 3C3.9 3 3 3.8 3 4.9V9c0 1 .8 1.9 1.9 1.9H9c1 0 1.9-.8 1.9-1.9V5c0-1-.8-1.9-1.9-1.9H5Zm10 0c-1 0-1.9.8-1.9 1.9V9c0 1 .8 1.9 1.9 1.9H19c1 0 1.9-.8 1.9-1.9V5c0-1-.8-1.9-1.9-1.9h-4Zm-10 10c-1 0-1.9.8-1.9 1.9V19c0 1 .8 1.9 1.9 1.9H9c1 0 1.9-.8 1.9-1.9v-4c0-1-.8-1.9-1.9-1.9H5ZM18 14a1 1 0 1 0-2 0v2h-2a1 1 0 1 0 0 2h2v2a1 1 0 1 0 2 0v-2h2a1 1 0 1 0 0-2h-2v-2Z" clip-rule="evenodd"/>
-  </svg>
-</button> 
-</div> 
+</section>
 <!-- /Nav -->
 
 
@@ -36,9 +74,8 @@
 <!-- HERO SECTION -->
 <section class="hero">
     <div class="container">
-        <h1>
-            Where <span style="color: var(--violetredColor);">Blockchain</span> States Unite for Decentralized Empowerment.
-        </h1>
+        <h1>Where <span style="color: var(--violetredColor);">Blockchain</span> State</h1>
+        <h1>Unite for Decentralized Empowerment.</h1>
         
         
     <a href="https://calendly.com/designatives/30-minute-meeting" target="_blank" rel="noreferrer" style="text-decoration: none;">
@@ -64,76 +101,83 @@
 
 
 
-<!--- EXPLORER SECTION --->
-    <header>
-        <p>Welcome to the Future of Decentralized Governance <span style="color: var(--violetredColor);">Join Gitic Token Distribution</span> Round-1 🚀</p>
-    </header>
-<!--- EXPLORER SECTION --->
-
-
 
 
 
 
 <!-- Features -->
-                    <section class="features">
-                        <div class="column">
-                            <div class="card">
-                                <div class="icon-container">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="var(--violetredColor)" width="30" height="30"
-                                        viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                                        <path
-                                            d="M243.4 2.6l-224 96c-14 6-21.8 21-18.7 35.8S16.8 160 32 160v8c0 13.3 10.7 24 24 24H456c13.3 0 24-10.7 24-24v-8c15.2 0 28.3-10.7 31.3-25.6s-4.8-29.9-18.7-35.8l-224-96c-8-3.4-17.2-3.4-25.2 0zM128 224H64V420.3c-.6 .3-1.2 .7-1.8 1.1l-48 32c-11.7 7.8-17 22.4-12.9 35.9S17.9 512 32 512H480c14.1 0 26.5-9.2 30.6-22.7s-1.1-28.1-12.9-35.9l-48-32c-.6-.4-1.2-.7-1.8-1.1V224H384V416H344V224H280V416H232V224H168V416H128V224zM256 64a32 32 0 1 1 0 64 32 32 0 1 1 0-64z" />
-                                    </svg>
-                                </div>
-                                <h3>Governance</h3>
-                                <p>
-                                    Gitic boasts an unstoppable decentralized governance model equipped with a smart contract constitution, yearly budget,
-                                    and decentralized decision-making capabilities. This ensures robust governance and autonomy within the
-                                    Gitic ecosystem.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="column">
-                            <div class="card">
-                                <div class="icon-container">
-                                    <svg class="w-6 h-6 text-gray-800 dark:text-white" fill="var(--violetredColor)" width="30" height="30"
-                                        aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                        <path
-                                            d="m1.56 6.245 8 3.924a1 1 0 0 0 .88 0l8-3.924a1 1 0 0 0 0-1.8l-8-3.925a1 1 0 0 0-.88 0l-8 3.925a1 1 0 0 0 0 1.8Z" />
-                                        <path
-                                            d="M18 8.376a1 1 0 0 0-1 1v.163l-7 3.434-7-3.434v-.163a1 1 0 0 0-2 0v.786a1 1 0 0 0 .56.9l8 3.925a1 1 0 0 0 .88 0l8-3.925a1 1 0 0 0 .56-.9v-.786a1 1 0 0 0-1-1Z" />
-                                        <path
-                                            d="M17.993 13.191a1 1 0 0 0-1 1v.163l-7 3.435-7-3.435v-.163a1 1 0 1 0-2 0v.787a1 1 0 0 0 .56.9l8 3.925a1 1 0 0 0 .88 0l8-3.925a1 1 0 0 0 .56-.9v-.787a1 1 0 0 0-1-1Z" />
-                                    </svg>
-                                </div>
-                                <h3>Technology</h3>
-                                <p>
-                                    Gitic States represent a decentralized network comprising various blockchain networks such as Ethereum,
-                                    Solana, Cardano, Neo, and more. Each state provides its citizens with access to proposals,
-                                    voting mechanisms, and active participation in the Gitic ecosystem.
-                                </p>
-                            </div>
-                        </div>
-                        
-                        <div class="column">
-                            <div class="card">
-                                <div class="icon-container">
-                                    <svg class="#" xmlns="http://www.w3.org/2000/svg" fill="var(--violetredColor)" weight="30" height="30"
-                                        viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                                        <path
-                                            d="M48 256C48 141.1 141.1 48 256 48c63.1 0 119.6 28.1 157.8 72.5c8.6 10.1 23.8 11.2 33.8 2.6s11.2-23.8 2.6-33.8C403.3 34.6 333.7 0 256 0C114.6 0 0 114.6 0 256v40c0 13.3 10.7 24 24 24s24-10.7 24-24V256zm458.5-52.9c-2.7-13-15.5-21.3-28.4-18.5s-21.3 15.5-18.5 28.4c2.9 13.9 4.5 28.3 4.5 43.1v40c0 13.3 10.7 24 24 24s24-10.7 24-24V256c0-18.1-1.9-35.8-5.5-52.9zM256 80c-19 0-37.4 3-54.5 8.6c-15.2 5-18.7 23.7-8.3 35.9c7.1 8.3 18.8 10.8 29.4 7.9c10.6-2.9 21.8-4.4 33.4-4.4c70.7 0 128 57.3 128 128v24.9c0 25.2-1.5 50.3-4.4 75.3c-1.7 14.6 9.4 27.8 24.2 27.8c11.8 0 21.9-8.6 23.3-20.3c3.3-27.4 5-55 5-82.7V256c0-97.2-78.8-176-176-176zM150.7 148.7c-9.1-10.6-25.3-11.4-33.9-.4C93.7 178 80 215.4 80 256v24.9c0 24.2-2.6 48.4-7.8 71.9C68.8 368.4 80.1 384 96.1 384c10.5 0 19.9-7 22.2-17.3c6.4-28.1 9.7-56.8 9.7-85.8V256c0-27.2 8.5-52.4 22.9-73.1c7.2-10.4 8-24.6-.2-34.2zM256 160c-53 0-96 43-96 96v24.9c0 35.9-4.6 71.5-13.8 106.1c-3.8 14.3 6.7 29 21.5 29c9.5 0 17.9-6.2 20.4-15.4c10.5-39 15.9-79.2 15.9-119.7V256c0-28.7 23.3-52 52-52s52 23.3 52 52v24.9c0 36.3-3.5 72.4-10.4 107.9c-2.7 13.9 7.7 27.2 21.8 27.2c10.2 0 19-7 21-17c7.7-38.8 11.6-78.3 11.6-118.1V256c0-53-43-96-96-96zm24 96c0-13.3-10.7-24-24-24s-24 10.7-24 24v24.9c0 59.9-11 119.3-32.5 175.2l-5.9 15.3c-4.8 12.4 1.4 26.3 13.8 31s26.3-1.4 31-13.8l5.9-15.3C267.9 411.9 280 346.7 280 280.9V256z" />
-                                    </svg>
-                                </div>
-                                <h3>Use Case</h3>
-                                <p>
-                                    Gitic empowers its citizens by providing them with tools and access to actively engage in governance.
-                                    This includes proposing initiatives, participating in voting processes, and contributing to the
-                                    decision-making that shapes the trajectory of Gitic States.
-                                </p>
-                            </div>
-                        </div>
-                    </section>
+<div class="features">
+  <div class="column">
+    <div class="card">
+        <div class="svg-border">
+        <svg class="w-6 h-6 text-gray-800 dark:text-white" fill="none" height="35" width="35"
+         aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+        <path stroke="var(--violetredColor)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 3v4c0 .6-.4 1-1 1H5m4 8h6m-6-4h6m4-8v16c0 .6-.4 1-1 1H6a1 1 0 0 1-1-1V8c0-.4.1-.6.3-.8l4-4 .6-.2H18c.6 0 1 .4 1 1Z"/>
+       </svg>
+    </div>
+      <h3>
+        Community <span style="color: var(--violetredColor);">Governance</span>
+      </h3>
+      <p>
+       Empowering citizenship to shape the direction of Gitic through democratic processes.
+        </p>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+         <div class="svg-border">
+          <svg class="w-6 h-6 text-gray-800 dark:text-white" fill="var(--violetredColor)" height="35" width="35"
+         aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+    <path d="M5 3a2 2 0 0 0-2 2v2c0 1.1.9 2 2 2h2a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5Zm0 12a2 2 0 0 0-2 2v2c0 1.1.9 2 2 2h2a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2H5Zm12 0a2 2 0 0 0-2 2v2c0 1.1.9 2 2 2h2a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2h-2Zm0-12a2 2 0 0 0-2 2v2c0 1.1.9 2 2 2h2a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-2Z"/>
+    <path fill-rule="evenodd" d="M10 6.5c0-.6.4-1 1-1h2a1 1 0 1 1 0 2h-2a1 1 0 0 1-1-1ZM10 18c0-.6.4-1 1-1h2a1 1 0 1 1 0 2h-2a1 1 0 0 1-1-1Zm-4-4a1 1 0 0 1-1-1v-2a1 1 0 1 1 2 0v2c0 .6-.4 1-1 1Zm12 0a1 1 0 0 1-1-1v-2a1 1 0 1 1 2 0v2c0 .6-.4 1-1 1Z" clip-rule="evenodd"/>
+  </svg>
+    </div>
+      <h3>
+        Decentralized <span style="color: var(--violetredColor);">Infrastructure</span>
+      </h3>
+      <p>
+       Built on blockchain technology for transparent and secure operation.
+      </p>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+         <div class="svg-border">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="var(--violetredColor)" height="35" width="35"
+            viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <path
+                d="M48 256C48 141.1 141.1 48 256 48c63.1 0 119.6 28.1 157.8 72.5c8.6 10.1 23.8 11.2 33.8 2.6s11.2-23.8 2.6-33.8C403.3 34.6 333.7 0 256 0C114.6 0 0 114.6 0 256v40c0 13.3 10.7 24 24 24s24-10.7 24-24V256zm458.5-52.9c-2.7-13-15.5-21.3-28.4-18.5s-21.3 15.5-18.5 28.4c2.9 13.9 4.5 28.3 4.5 43.1v40c0 13.3 10.7 24 24 24s24-10.7 24-24V256c0-18.1-1.9-35.8-5.5-52.9zM256 80c-19 0-37.4 3-54.5 8.6c-15.2 5-18.7 23.7-8.3 35.9c7.1 8.3 18.8 10.8 29.4 7.9c10.6-2.9 21.8-4.4 33.4-4.4c70.7 0 128 57.3 128 128v24.9c0 25.2-1.5 50.3-4.4 75.3c-1.7 14.6 9.4 27.8 24.2 27.8c11.8 0 21.9-8.6 23.3-20.3c3.3-27.4 5-55 5-82.7V256c0-97.2-78.8-176-176-176zM150.7 148.7c-9.1-10.6-25.3-11.4-33.9-.4C93.7 178 80 215.4 80 256v24.9c0 24.2-2.6 48.4-7.8 71.9C68.8 368.4 80.1 384 96.1 384c10.5 0 19.9-7 22.2-17.3c6.4-28.1 9.7-56.8 9.7-85.8V256c0-27.2 8.5-52.4 22.9-73.1c7.2-10.4 8-24.6-.2-34.2zM256 160c-53 0-96 43-96 96v24.9c0 35.9-4.6 71.5-13.8 106.1c-3.8 14.3 6.7 29 21.5 29c9.5 0 17.9-6.2 20.4-15.4c10.5-39 15.9-79.2 15.9-119.7V256c0-28.7 23.3-52 52-52s52 23.3 52 52v24.9c0 36.3-3.5 72.4-10.4 107.9c-2.7 13.9 7.7 27.2 21.8 27.2c10.2 0 19-7 21-17c7.7-38.8 11.6-78.3 11.6-118.1V256c0-53-43-96-96-96zm24 96c0-13.3-10.7-24-24-24s-24 10.7-24 24v24.9c0 59.9-11 119.3-32.5 175.2l-5.9 15.3c-4.8 12.4 1.4 26.3 13.8 31s26.3-1.4 31-13.8l5.9-15.3C267.9 411.9 280 346.7 280 280.9V256z" />
+        </svg>
+    </div>
+      <h3>
+        Bold <span style="color: var(--violetredColor);">Interoperability</span>
+      </h3>
+      <p>
+        Seamless integration with multiple blockchain platforms for enhanced collaboration.
+      </p>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+        <div class="svg-border">
+        <svg class="w-6 h-6 text-gray-800 dark:text-white" fill="none" height="35" width="35"
+         aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+    <path stroke="var(--violetredColor)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6a7.5 7.5 0 1 0 8 8h-8V6Z"/>
+    <path stroke="var(--violetredColor)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.5 3H13v8h8v-.5A7.5 7.5 0 0 0 13.5 3Z"/>
+  </svg>
+    </div>
+      <h3>
+        Sustainable <span style="color: var(--violetredColor);">Development</span>
+      </h3>
+      <p>
+       Commitiment to long-term growth and positive impact within the decentralized technology space.
+      </p>
+    </div>
+  </div>
+</div>
                     <!-- /Features -->
 
 
@@ -155,11 +199,243 @@
 
 
 
-        <section class="title">
-                <div class="content">
-                    <h1>Explore Gitic</h1>
-                </div>
-            </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="container-count">
+  <h1 id="headline"></h1>
+    <div id="countdown">
+      <ul>
+        <li><span id="days"></span>days</li>
+        <li><span id="hours"></span>Hours</li>
+        <li><span id="minutes"></span>Minutes</li>
+        <li><span id="seconds"></span>Seconds</li>
+      </ul>
+    </div>
+    <div id="content" class="emoji">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+<section class="learn">
+    <div class="content">
+        <p>
+           Gitic stands at the forefront of decentralized autonomous organization (DAO) platforms, offering an innovative ecosystem
+        where individuals and communities co-create the future of blockchain technology. Through our transparent, inclusive, and
+        secure platform, users actively engage in decision-making, submit proposals, and vote on projects.
+        </p>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+<div class="flex-presale">
+  <div class="left">
+    <!----------->
+    <a href="#">
+        <svg class="w-6 h-6 text-gray-800 dark:text-white" fill="" width="350" height="100" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+    <path stroke="lightgreen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12l4-4m-4 4 4 4"/>
+  </svg>
+        CSO Airdrop
+    </a>
+    <!----------->
+  </div>
+  <div class="right">
+    <!------------------>
+     <a href="#">
+        GDO Presale
+        <svg class="w-6 h-6 text-gray-800 dark:text-white" fill="" width="350" height="100" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+    <path stroke="lightgreen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4"/>
+  </svg>
+     </a>
+    <!------------------->
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+<!-- HERO SECTION -->
+<section class="concept">
+    <div class="container">
+        <h1>Token <span style="color: var(--violetredColor);">Concept</span></h1>
+        <p>
+         The Gitic Token represents a pivotal aspect of the Governance for Interoperable Technologies
+         and Innovation Consortium (Gitic), serving as a fundamental element within its decentralized
+          ecosystem. Designed to facilitate governance, incentivize participation, and foster
+           collaboration across diverse blockchain networks, the Gitic Token embodies the
+            organization's commitment to driving innovation and interoperability
+             within the decentralized technology space.
+        </p>    
+    </div>
+</section>
+<!-- /HERO SECTION -->
+
+
+
+
+
+<div class="tokenless">
+  <div class="column">
+    <div class="card">
+        <div class="svg-border">
+        <svg class="w-6 h-6 text-gray-800 dark:text-white" fill="none" height="35" width="35"
+         aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+        <path stroke="var(--violetredColor)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 3v4c0 .6-.4 1-1 1H5m4 8h6m-6-4h6m4-8v16c0 .6-.4 1-1 1H6a1 1 0 0 1-1-1V8c0-.4.1-.6.3-.8l4-4 .6-.2H18c.6 0 1 .4 1 1Z"/>
+       </svg>
+    </div>
+      <h3>
+        <span style="color: var(--violetredColor);">Governance</span>
+      </h3>
+      <p>
+       Empowers holders with governance rights and privileges, allowing them to participate
+        in decision-making processes, propose initiatives, and vote on proposals within the Gitic DAO.
+         By leveraging the Gitic Token for governance, members contribute to shaping the direction
+          and strategy of Gitic, ensuring that decisions are made collaboratively and transparently.
+        </p>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+         <div class="svg-border">
+          <svg class="w-6 h-6 text-gray-800 dark:text-white" fill="var(--violetredColor)" height="35" width="35"
+         aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+    <path d="M5 3a2 2 0 0 0-2 2v2c0 1.1.9 2 2 2h2a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5Zm0 12a2 2 0 0 0-2 2v2c0 1.1.9 2 2 2h2a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2H5Zm12 0a2 2 0 0 0-2 2v2c0 1.1.9 2 2 2h2a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2h-2Zm0-12a2 2 0 0 0-2 2v2c0 1.1.9 2 2 2h2a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-2Z"/>
+    <path fill-rule="evenodd" d="M10 6.5c0-.6.4-1 1-1h2a1 1 0 1 1 0 2h-2a1 1 0 0 1-1-1ZM10 18c0-.6.4-1 1-1h2a1 1 0 1 1 0 2h-2a1 1 0 0 1-1-1Zm-4-4a1 1 0 0 1-1-1v-2a1 1 0 1 1 2 0v2c0 .6-.4 1-1 1Zm12 0a1 1 0 0 1-1-1v-2a1 1 0 1 1 2 0v2c0 .6-.4 1-1 1Z" clip-rule="evenodd"/>
+  </svg>
+    </div>
+      <h3>
+        <span style="color: var(--violetredColor);">Interoperability</span>
+      </h3>
+      <p>
+       The Gitic Token operates seamlessly across multiple blockchain states, serving as a common
+        medium of exchange and governance within the Gitic ecosystem. This interoperability enables
+         Citizens to engage with Gitic's initiatives, projects, and governance processes across
+          various blockchain states, promoting synergy and collaboration.
+      </p>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+         <div class="svg-border">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="var(--violetredColor)" height="35" width="35"
+            viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <path
+                d="M48 256C48 141.1 141.1 48 256 48c63.1 0 119.6 28.1 157.8 72.5c8.6 10.1 23.8 11.2 33.8 2.6s11.2-23.8 2.6-33.8C403.3 34.6 333.7 0 256 0C114.6 0 0 114.6 0 256v40c0 13.3 10.7 24 24 24s24-10.7 24-24V256zm458.5-52.9c-2.7-13-15.5-21.3-28.4-18.5s-21.3 15.5-18.5 28.4c2.9 13.9 4.5 28.3 4.5 43.1v40c0 13.3 10.7 24 24 24s24-10.7 24-24V256c0-18.1-1.9-35.8-5.5-52.9zM256 80c-19 0-37.4 3-54.5 8.6c-15.2 5-18.7 23.7-8.3 35.9c7.1 8.3 18.8 10.8 29.4 7.9c10.6-2.9 21.8-4.4 33.4-4.4c70.7 0 128 57.3 128 128v24.9c0 25.2-1.5 50.3-4.4 75.3c-1.7 14.6 9.4 27.8 24.2 27.8c11.8 0 21.9-8.6 23.3-20.3c3.3-27.4 5-55 5-82.7V256c0-97.2-78.8-176-176-176zM150.7 148.7c-9.1-10.6-25.3-11.4-33.9-.4C93.7 178 80 215.4 80 256v24.9c0 24.2-2.6 48.4-7.8 71.9C68.8 368.4 80.1 384 96.1 384c10.5 0 19.9-7 22.2-17.3c6.4-28.1 9.7-56.8 9.7-85.8V256c0-27.2 8.5-52.4 22.9-73.1c7.2-10.4 8-24.6-.2-34.2zM256 160c-53 0-96 43-96 96v24.9c0 35.9-4.6 71.5-13.8 106.1c-3.8 14.3 6.7 29 21.5 29c9.5 0 17.9-6.2 20.4-15.4c10.5-39 15.9-79.2 15.9-119.7V256c0-28.7 23.3-52 52-52s52 23.3 52 52v24.9c0 36.3-3.5 72.4-10.4 107.9c-2.7 13.9 7.7 27.2 21.8 27.2c10.2 0 19-7 21-17c7.7-38.8 11.6-78.3 11.6-118.1V256c0-53-43-96-96-96zm24 96c0-13.3-10.7-24-24-24s-24 10.7-24 24v24.9c0 59.9-11 119.3-32.5 175.2l-5.9 15.3c-4.8 12.4 1.4 26.3 13.8 31s26.3-1.4 31-13.8l5.9-15.3C267.9 411.9 280 346.7 280 280.9V256z" />
+        </svg>
+    </div>
+      <h3>
+        <span style="color: var(--violetredColor);">Incentives</span>
+      </h3>
+      <p>
+       Serves as an incentive mechanism to reward Citizens for their contributions, engagement,
+        and adherence to Gitic's values and objectives. Citizens may earn Gitic Tokens through activities
+         such as participating in governance processes, contributing to projects, or providing valuable
+          feedback to the community. These incentives foster a vibrant and
+           engaged community within Gitic, driving innovation and growth.
+      </p>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+         <div class="svg-border">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="var(--violetredColor)" height="35" width="35"
+            viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <path
+                d="M48 256C48 141.1 141.1 48 256 48c63.1 0 119.6 28.1 157.8 72.5c8.6 10.1 23.8 11.2 33.8 2.6s11.2-23.8 2.6-33.8C403.3 34.6 333.7 0 256 0C114.6 0 0 114.6 0 256v40c0 13.3 10.7 24 24 24s24-10.7 24-24V256zm458.5-52.9c-2.7-13-15.5-21.3-28.4-18.5s-21.3 15.5-18.5 28.4c2.9 13.9 4.5 28.3 4.5 43.1v40c0 13.3 10.7 24 24 24s24-10.7 24-24V256c0-18.1-1.9-35.8-5.5-52.9zM256 80c-19 0-37.4 3-54.5 8.6c-15.2 5-18.7 23.7-8.3 35.9c7.1 8.3 18.8 10.8 29.4 7.9c10.6-2.9 21.8-4.4 33.4-4.4c70.7 0 128 57.3 128 128v24.9c0 25.2-1.5 50.3-4.4 75.3c-1.7 14.6 9.4 27.8 24.2 27.8c11.8 0 21.9-8.6 23.3-20.3c3.3-27.4 5-55 5-82.7V256c0-97.2-78.8-176-176-176zM150.7 148.7c-9.1-10.6-25.3-11.4-33.9-.4C93.7 178 80 215.4 80 256v24.9c0 24.2-2.6 48.4-7.8 71.9C68.8 368.4 80.1 384 96.1 384c10.5 0 19.9-7 22.2-17.3c6.4-28.1 9.7-56.8 9.7-85.8V256c0-27.2 8.5-52.4 22.9-73.1c7.2-10.4 8-24.6-.2-34.2zM256 160c-53 0-96 43-96 96v24.9c0 35.9-4.6 71.5-13.8 106.1c-3.8 14.3 6.7 29 21.5 29c9.5 0 17.9-6.2 20.4-15.4c10.5-39 15.9-79.2 15.9-119.7V256c0-28.7 23.3-52 52-52s52 23.3 52 52v24.9c0 36.3-3.5 72.4-10.4 107.9c-2.7 13.9 7.7 27.2 21.8 27.2c10.2 0 19-7 21-17c7.7-38.8 11.6-78.3 11.6-118.1V256c0-53-43-96-96-96zm24 96c0-13.3-10.7-24-24-24s-24 10.7-24 24v24.9c0 59.9-11 119.3-32.5 175.2l-5.9 15.3c-4.8 12.4 1.4 26.3 13.8 31s26.3-1.4 31-13.8l5.9-15.3C267.9 411.9 280 346.7 280 280.9V256z" />
+        </svg>
+    </div>
+      <h3>
+        <span style="color: var(--violetredColor);">Utility</span>
+      </h3>
+      <p>
+       Gitic Token has utility beyond governance, enabling holders to access and utilize various
+        products, services, and resources within the Gitic ecosystem. This utility may include accessing
+         premium features, participating in exclusive events or programs, or redeeming rewards and 
+         benefits offered by Gitic and its partners. The Gitic Token serves
+          as a key enabler of ecosystem participation and engagement.
+      </p>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+         <div class="svg-border">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="var(--violetredColor)" height="35" width="35"
+            viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+            <path
+                d="M48 256C48 141.1 141.1 48 256 48c63.1 0 119.6 28.1 157.8 72.5c8.6 10.1 23.8 11.2 33.8 2.6s11.2-23.8 2.6-33.8C403.3 34.6 333.7 0 256 0C114.6 0 0 114.6 0 256v40c0 13.3 10.7 24 24 24s24-10.7 24-24V256zm458.5-52.9c-2.7-13-15.5-21.3-28.4-18.5s-21.3 15.5-18.5 28.4c2.9 13.9 4.5 28.3 4.5 43.1v40c0 13.3 10.7 24 24 24s24-10.7 24-24V256c0-18.1-1.9-35.8-5.5-52.9zM256 80c-19 0-37.4 3-54.5 8.6c-15.2 5-18.7 23.7-8.3 35.9c7.1 8.3 18.8 10.8 29.4 7.9c10.6-2.9 21.8-4.4 33.4-4.4c70.7 0 128 57.3 128 128v24.9c0 25.2-1.5 50.3-4.4 75.3c-1.7 14.6 9.4 27.8 24.2 27.8c11.8 0 21.9-8.6 23.3-20.3c3.3-27.4 5-55 5-82.7V256c0-97.2-78.8-176-176-176zM150.7 148.7c-9.1-10.6-25.3-11.4-33.9-.4C93.7 178 80 215.4 80 256v24.9c0 24.2-2.6 48.4-7.8 71.9C68.8 368.4 80.1 384 96.1 384c10.5 0 19.9-7 22.2-17.3c6.4-28.1 9.7-56.8 9.7-85.8V256c0-27.2 8.5-52.4 22.9-73.1c7.2-10.4 8-24.6-.2-34.2zM256 160c-53 0-96 43-96 96v24.9c0 35.9-4.6 71.5-13.8 106.1c-3.8 14.3 6.7 29 21.5 29c9.5 0 17.9-6.2 20.4-15.4c10.5-39 15.9-79.2 15.9-119.7V256c0-28.7 23.3-52 52-52s52 23.3 52 52v24.9c0 36.3-3.5 72.4-10.4 107.9c-2.7 13.9 7.7 27.2 21.8 27.2c10.2 0 19-7 21-17c7.7-38.8 11.6-78.3 11.6-118.1V256c0-53-43-96-96-96zm24 96c0-13.3-10.7-24-24-24s-24 10.7-24 24v24.9c0 59.9-11 119.3-32.5 175.2l-5.9 15.3c-4.8 12.4 1.4 26.3 13.8 31s26.3-1.4 31-13.8l5.9-15.3C267.9 411.9 280 346.7 280 280.9V256z" />
+        </svg>
+    </div>
+      <h3>
+        <span style="color: var(--violetredColor);">Ownership</span>
+      </h3>
+      <p>
+       By holding Gitic Tokens, Citizens become stakeholders in the Gitic ecosystem, fostering a sense
+        of ownership, belonging, and alignment with the organization's mission and values. The
+         decentralized distribution of Gitic Tokens ensures broad community ownership and participation,
+          aligning incentives and interests towards the collective advancement of technologies.
+      </p>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+        <div class="svg-border">
+        <svg class="w-6 h-6 text-gray-800 dark:text-white" fill="none" height="35" width="35"
+         aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+    <path stroke="var(--violetredColor)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6a7.5 7.5 0 1 0 8 8h-8V6Z"/>
+    <path stroke="var(--violetredColor)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.5 3H13v8h8v-.5A7.5 7.5 0 0 0 13.5 3Z"/>
+  </svg>
+    </div>
+      <h3>
+    <span style="color: var(--violetredColor);">Interstate</span>
+      </h3>
+      <p>
+      Gitic Tokens are governed by smart contracts deployed across different blockchain states, ensuring
+       consistency, transparency, and security in token operations and governance. Interstate governance
+        mechanisms enable seamless interaction and coordination between Gitic Tokens across different
+         blockchain platforms, promoting interoperability and scalability.
+      </p>
+    </div>
+  </div>
+</div>
+
+
 
 
 
@@ -169,67 +445,7 @@
 
 
 
-   
 
-
-
-
-<div class="tabs">
-  <input type="radio" class="tabs__radio" name="tabs-example" id="tab1" checked>
-  <label for="tab1" class="tabs__label">Airdrop</label>
-  <div class="tabs__content">
-      <div class="flex-states">
-  <div class="flex-item-left">
-  <h1>
-    Airdr<svg xmlns="http://www.w3.org/2000/svg" fill="var(--mainColor)" height="80" width="80" viewBox="0 0 384 512">
-    <path d="M192 512C86 512 0 426 0 320C0 228.8 130.2 57.7 166.6 11.7C172.6 4.2 181.5 0 191.1 0h1.8c9.6 0 18.5 4.2 24.5 11.7C253.8 57.7 384 228.8 384 320c0 106-86 192-192 192zM96 336c0-8.8-7.2-16-16-16s-16 7.2-16 16c0 61.9 50.1 112 112 112c8.8 0 16-7.2 16-16s-7.2-16-16-16c-44.2 0-80-35.8-80-80z"/>
-</svg>p
-</h1>
-  </div>
-
-  <div class="flex-item-right">
-<div class="presale-card">
-  <h1>70<span style="color: var(--violetredColor);">%</span></h1>
-  <p>Claim your free GITIC tokens on <span id="spin2" style="color: var(--violetredColor);"></span> now!!</p>
-  <div class="countdown" id="countdown">Presale ends in: 10 days 05:30:20</div>
-  
-   <a href="https://calendly.com/designatives/30-minute-meeting" target="_blank" rel="noreferrer" style="text-decoration: none;">
-  Claiim
-</a>
-
-</div>
-  </div>
-</div>
-  </div>
-
-
-  <input type="radio" class="tabs__radio" name="tabs-example" id="tab2">
-  <label for="tab2" class="tabs__label">IGO presale</label>
-  <div class="tabs__content">
-      <div class="flex-states">
-  <div class="flex-item-left">
-  <h1>
-    Gitdr<svg xmlns="http://www.w3.org/2000/svg" fill="var(--mainColor)" height="80" width="80" viewBox="0 0 384 512">
-    <path d="M192 512C86 512 0 426 0 320C0 228.8 130.2 57.7 166.6 11.7C172.6 4.2 181.5 0 191.1 0h1.8c9.6 0 18.5 4.2 24.5 11.7C253.8 57.7 384 228.8 384 320c0 106-86 192-192 192zM96 336c0-8.8-7.2-16-16-16s-16 7.2-16 16c0 61.9 50.1 112 112 112c8.8 0 16-7.2 16-16s-7.2-16-16-16c-44.2 0-80-35.8-80-80z"/>
-</svg>p
-  </h1>
-  </div>
-
-  <div class="flex-item-right">
-<div class="presale-card">
-  <h1>70<span style="color: var(--violetredColor);">%</span></h1>
-  <p>Claim your free GITIC tokens on <span id="spin2" style="color: var(--violetredColor);"></span> now!!</p>
-  <div class="countdown" id="countdown">Presale ends in: 10 days 05:30:20</div>
-  
-   <a href="https://calendly.com/designatives/30-minute-meeting" target="_blank" rel="noreferrer" style="text-decoration: none;">
-  Claiim
-</a>
-
-</div>
-  </div>
-</div>
-  </div>
-</div>
 
 
 
@@ -301,8 +517,118 @@
 
 
 
+        <section class="title">
+                <div class="content">
+                    <h1>Join Community</h1>
+                </div>
+            </section>
 
 
+
+
+
+
+
+<!-- FOOTER -->
+            <footer>
+                <section class="content">
+                    <div class="top">
+                        <h2></h2>
+                    </div>
+                    <div class="link-boxes">
+                        <ul class="box">
+                            <li><a href="#">Governance</a></li>
+                            <li><a href="#">States</a></li>
+                            <li><a href="#">Constitution</a></li>
+                            <li><a href="#">Budget</a></li>
+                        </ul>
+                        <ul class="box">
+                            <li><a href="#">Ecosystem</a></li>
+                            <li><a href="#">Gitic Token</a></li>
+                            <li><a href="#">Issued Networks</a></li>
+                            <li><a href="#">Reserve Pool</a></li>
+                        </ul>
+            
+                        <ul class="box">
+                            <li><a href="#">Ambassador <sup><i style="color: var(--yellowColor);">Apply</i></sup></a></li>
+                            <li><a href="#">Grant</a> <sup><i style="color: var(--yellowColor);">Apply</i></sup></li>
+                            <li><a href="#">Research <sup><i style="color: var(--yellowColor);">Join</i></sup></a></li>
+                            <li><a href="#">Venture <sup><i style="color: var(--yellowColor);">Partner</i></sup></a></li>
+                        </ul>
+            
+                        <ul class="box">
+                            <p>
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="var(--yellowColor)" height="25" width="25"
+                                        viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <path
+                                            d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
+                                    </svg>
+                                </a>
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="var(--yellowColor)" height="25" width="25"
+                                        viewBox="0 0 496 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <path
+                                            d="M248 8C111 8 0 119 0 256S111 504 248 504 496 393 496 256 385 8 248 8zM363 176.7c-3.7 39.2-19.9 134.4-28.1 178.3-3.5 18.6-10.3 24.8-16.9 25.4-14.4 1.3-25.3-9.5-39.3-18.7-21.8-14.3-34.2-23.2-55.3-37.2-24.5-16.1-8.6-25 5.3-39.5 3.7-3.8 67.1-61.5 68.3-66.7 .2-.7 .3-3.1-1.2-4.4s-3.6-.8-5.1-.5q-3.3 .7-104.6 69.1-14.8 10.2-26.9 9.9c-8.9-.2-25.9-5-38.6-9.1-15.5-5-27.9-7.7-26.8-16.3q.8-6.7 18.5-13.7 108.4-47.2 144.6-62.3c68.9-28.6 83.2-33.6 92.5-33.8 2.1 0 6.6 .5 9.6 2.9a10.5 10.5 0 0 1 3.5 6.7A43.8 43.8 0 0 1 363 176.7z" />
+                                    </svg>
+                                </a>
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="var(--yellowColor)" height="25" width="25"
+                                        viewBox="0 0 640 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <path
+                                            d="M524.5 69.8a1.5 1.5 0 0 0 -.8-.7A485.1 485.1 0 0 0 404.1 32a1.8 1.8 0 0 0 -1.9 .9 337.5 337.5 0 0 0 -14.9 30.6 447.8 447.8 0 0 0 -134.4 0 309.5 309.5 0 0 0 -15.1-30.6 1.9 1.9 0 0 0 -1.9-.9A483.7 483.7 0 0 0 116.1 69.1a1.7 1.7 0 0 0 -.8 .7C39.1 183.7 18.2 294.7 28.4 404.4a2 2 0 0 0 .8 1.4A487.7 487.7 0 0 0 176 479.9a1.9 1.9 0 0 0 2.1-.7A348.2 348.2 0 0 0 208.1 430.4a1.9 1.9 0 0 0 -1-2.6 321.2 321.2 0 0 1 -45.9-21.9 1.9 1.9 0 0 1 -.2-3.1c3.1-2.3 6.2-4.7 9.1-7.1a1.8 1.8 0 0 1 1.9-.3c96.2 43.9 200.4 43.9 295.5 0a1.8 1.8 0 0 1 1.9 .2c2.9 2.4 6 4.9 9.1 7.2a1.9 1.9 0 0 1 -.2 3.1 301.4 301.4 0 0 1 -45.9 21.8 1.9 1.9 0 0 0 -1 2.6 391.1 391.1 0 0 0 30 48.8 1.9 1.9 0 0 0 2.1 .7A486 486 0 0 0 610.7 405.7a1.9 1.9 0 0 0 .8-1.4C623.7 277.6 590.9 167.5 524.5 69.8zM222.5 337.6c-29 0-52.8-26.6-52.8-59.2S193.1 219.1 222.5 219.1c29.7 0 53.3 26.8 52.8 59.2C275.3 311 251.9 337.6 222.5 337.6zm195.4 0c-29 0-52.8-26.6-52.8-59.2S388.4 219.1 417.9 219.1c29.7 0 53.3 26.8 52.8 59.2C470.7 311 447.5 337.6 417.9 337.6z" />
+                                    </svg>
+                                </a>
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="var(--yellowColor)" height="25" width="25"
+                                        viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <path
+                                            d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z" />
+                                    </svg>
+                                </a>
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="var(--yellowColor)" height="25" width="25"
+                                        viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <path
+                                            d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z" />
+                                    </svg>
+                                </a>
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="var(--yellowColor)" height="25" width="25"
+                                        viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <path
+                                            d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+                                    </svg>
+                                </a>
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="var(--yellowColor)" height="25" width="25"
+                                        viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <path
+                                            d="M64 32l320 0c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96C0 60.7 28.7 32 64 32zM305.9 166.4c20.6 0 37.3-16.7 37.3-37.3s-16.7-37.3-37.3-37.3c-18 0-33.1 12.8-36.6 29.8c-30.2 3.2-53.8 28.8-53.8 59.9l0 .2c-32.8 1.4-62.8 10.7-86.6 25.5c-8.8-6.8-19.9-10.9-32-10.9c-28.9 0-52.3 23.4-52.3 52.3c0 21 12.3 39 30.1 47.4c1.7 60.7 67.9 109.6 149.3 109.6s147.6-48.9 149.3-109.7c17.7-8.4 29.9-26.4 29.9-47.3c0-28.9-23.4-52.3-52.3-52.3c-12 0-23 4-31.9 10.8c-24-14.9-54.3-24.2-87.5-25.4l0-.1c0-22.2 16.5-40.7 37.9-43.7l0 0c3.9 16.5 18.7 28.7 36.3 28.7zM155 248.1c14.6 0 25.8 15.4 25 34.4s-11.8 25.9-26.5 25.9s-27.5-7.7-26.6-26.7s13.5-33.5 28.1-33.5zm166.4 33.5c.9 19-12 26.7-26.6 26.7s-25.6-6.9-26.5-25.9c-.9-19 10.3-34.4 25-34.4s27.3 14.6 28.1 33.5zm-42.1 49.6c-9 21.5-30.3 36.7-55.1 36.7s-46.1-15.1-55.1-36.7c-1.1-2.6 .7-5.4 3.4-5.7c16.1-1.6 33.5-2.5 51.7-2.5s35.6 .9 51.7 2.5c2.7 .3 4.5 3.1 3.4 5.7z" />
+                                    </svg>
+                                </a>
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="var(--yellowColor)" height="25" width="25"
+                                        viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                        <path
+                                            d="M194.4 211.7a53.3 53.3 0 1 0 59.3 88.7 53.3 53.3 0 1 0 -59.3-88.7zm142.3-68.4c-5.2-5.2-11.5-9.3-18.4-12c-18.1-7.1-57.6-6.8-83.1-6.5c-4.1 0-7.9 .1-11.2 .1c-3.3 0-7.2 0-11.4-.1c-25.5-.3-64.8-.7-82.9 6.5c-6.9 2.7-13.1 6.8-18.4 12s-9.3 11.5-12 18.4c-7.1 18.1-6.7 57.7-6.5 83.2c0 4.1 .1 7.9 .1 11.1s0 7-.1 11.1c-.2 25.5-.6 65.1 6.5 83.2c2.7 6.9 6.8 13.1 12 18.4s11.5 9.3 18.4 12c18.1 7.1 57.6 6.8 83.1 6.5c4.1 0 7.9-.1 11.2-.1c3.3 0 7.2 0 11.4 .1c25.5 .3 64.8 .7 82.9-6.5c6.9-2.7 13.1-6.8 18.4-12s9.3-11.5 12-18.4c7.2-18 6.8-57.4 6.5-83c0-4.2-.1-8.1-.1-11.4s0-7.1 .1-11.4c.3-25.5 .7-64.9-6.5-83l0 0c-2.7-6.9-6.8-13.1-12-18.4zm-67.1 44.5A82 82 0 1 1 178.4 324.2a82 82 0 1 1 91.1-136.4zm29.2-1.3c-3.1-2.1-5.6-5.1-7.1-8.6s-1.8-7.3-1.1-11.1s2.6-7.1 5.2-9.8s6.1-4.5 9.8-5.2s7.6-.4 11.1 1.1s6.5 3.9 8.6 7s3.2 6.8 3.2 10.6c0 2.5-.5 5-1.4 7.3s-2.4 4.4-4.1 6.2s-3.9 3.2-6.2 4.2s-4.8 1.5-7.3 1.5l0 0c-3.8 0-7.5-1.1-10.6-3.2zM448 96c0-35.3-28.7-64-64-64H64C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96zM357 389c-18.7 18.7-41.4 24.6-67 25.9c-26.4 1.5-105.6 1.5-132 0c-25.6-1.3-48.3-7.2-67-25.9s-24.6-41.4-25.8-67c-1.5-26.4-1.5-105.6 0-132c1.3-25.6 7.1-48.3 25.8-67s41.5-24.6 67-25.8c26.4-1.5 105.6-1.5 132 0c25.6 1.3 48.3 7.1 67 25.8s24.6 41.4 25.8 67c1.5 26.3 1.5 105.4 0 131.9c-1.3 25.6-7.1 48.3-25.8 67z" />
+                                    </svg>
+                                </a>
+                            </p>
+                        </ul>
+                    </div>
+                </section>
+                <div class="bottom-details">
+                    <div class="bottom_text">
+                        <span class="copyright_text">&copy; 2024 Gitic. All rights reserved.</span>
+                        <span class="policy_terms">
+                            <a href="#">Powered by Gitic Lab</a>
+            
+                        </span>
+                    </div>
+                </div>
+            </footer>
+            <!-- /FOOTER -->
 
 
 
@@ -310,4 +636,5 @@
 
 
 </body>
+
 </html>
