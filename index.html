@@ -5,13 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gitic Voting</title>
-    <link rel="stylesheet" href="vote.css">
-    <script src="vote.js"></script>
+    <link rel="stylesheet" href="voting.css">
+    <script src="voting.js"></script>
 </head>
 
 <body>
-
-
 
 
     <section class="banner-cover">
@@ -31,81 +29,41 @@
             </p>
         </div>
         <!------/Alerts------>
-    <div class="nav-cover">
-        <span class="nav-img"><img
-                src="https://github.com/giticnetwork/frontend/blob/7e5b5430a89aeff1f9d7a427820f55d85bb26427/giticlogo.png"
-                width="30" height="30"></span>
-
-                
-    <button class="menu" onclick="openNav()"></button>
-
-
-  <div id="myNav" class="overlay">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <div class="overlay-content">
-    <a href="#">About Gitic</a>
-    <a href="#">Services</a>
-    <a href="#">Clients</a>
-    <a href="#">Contact</a>
-
-
-<!-------SOCIAL MEDIA HANDLES-------->
-    <div class="social-icons">
-            <a href="#" target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="var(--gitic-purple)" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
-            </a>
-            <a href="#" target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z"/></svg>
-            </a>
-            <a href="#" target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M248 8C111 8 0 119 0 256S111 504 248 504 496 393 496 256 385 8 248 8zM363 176.7c-3.7 39.2-19.9 134.4-28.1 178.3-3.5 18.6-10.3 24.8-16.9 25.4-14.4 1.3-25.3-9.5-39.3-18.7-21.8-14.3-34.2-23.2-55.3-37.2-24.5-16.1-8.6-25 5.3-39.5 3.7-3.8 67.1-61.5 68.3-66.7 .2-.7 .3-3.1-1.2-4.4s-3.6-.8-5.1-.5q-3.3 .7-104.6 69.1-14.8 10.2-26.9 9.9c-8.9-.2-25.9-5-38.6-9.1-15.5-5-27.9-7.7-26.8-16.3q.8-6.7 18.5-13.7 108.4-47.2 144.6-62.3c68.9-28.6 83.2-33.6 92.5-33.8 2.1 0 6.6 .5 9.6 2.9a10.5 10.5 0 0 1 3.5 6.7A43.8 43.8 0 0 1 363 176.7z"/></svg>
-            </a>
-            <a href="#" target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M524.5 69.8a1.5 1.5 0 0 0 -.8-.7A485.1 485.1 0 0 0 404.1 32a1.8 1.8 0 0 0 -1.9 .9 337.5 337.5 0 0 0 -14.9 30.6 447.8 447.8 0 0 0 -134.4 0 309.5 309.5 0 0 0 -15.1-30.6 1.9 1.9 0 0 0 -1.9-.9A483.7 483.7 0 0 0 116.1 69.1a1.7 1.7 0 0 0 -.8 .7C39.1 183.7 18.2 294.7 28.4 404.4a2 2 0 0 0 .8 1.4A487.7 487.7 0 0 0 176 479.9a1.9 1.9 0 0 0 2.1-.7A348.2 348.2 0 0 0 208.1 430.4a1.9 1.9 0 0 0 -1-2.6 321.2 321.2 0 0 1 -45.9-21.9 1.9 1.9 0 0 1 -.2-3.1c3.1-2.3 6.2-4.7 9.1-7.1a1.8 1.8 0 0 1 1.9-.3c96.2 43.9 200.4 43.9 295.5 0a1.8 1.8 0 0 1 1.9 .2c2.9 2.4 6 4.9 9.1 7.2a1.9 1.9 0 0 1 -.2 3.1 301.4 301.4 0 0 1 -45.9 21.8 1.9 1.9 0 0 0 -1 2.6 391.1 391.1 0 0 0 30 48.8 1.9 1.9 0 0 0 2.1 .7A486 486 0 0 0 610.7 405.7a1.9 1.9 0 0 0 .8-1.4C623.7 277.6 590.9 167.5 524.5 69.8zM222.5 337.6c-29 0-52.8-26.6-52.8-59.2S193.1 219.1 222.5 219.1c29.7 0 53.3 26.8 52.8 59.2C275.3 311 251.9 337.6 222.5 337.6zm195.4 0c-29 0-52.8-26.6-52.8-59.2S388.4 219.1 417.9 219.1c29.7 0 53.3 26.8 52.8 59.2C470.7 311 447.5 337.6 417.9 337.6z"/></svg>
-            </a>
-            <a href="#" target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M373 138.6c-25.2 0-46.3-17.5-51.9-41l0 0c-30.6 4.3-54.2 30.7-54.2 62.4l0 .2c47.4 1.8 90.6 15.1 124.9 36.3c12.6-9.7 28.4-15.5 45.5-15.5c41.3 0 74.7 33.4 74.7 74.7c0 29.8-17.4 55.5-42.7 67.5c-2.4 86.8-97 156.6-213.2 156.6S45.5 410.1 43 323.4C17.6 311.5 0 285.7 0 255.7c0-41.3 33.4-74.7 74.7-74.7c17.2 0 33 5.8 45.7 15.6c34-21.1 76.8-34.4 123.7-36.4l0-.3c0-44.3 33.7-80.9 76.8-85.5C325.8 50.2 347.2 32 373 32c29.4 0 53.3 23.9 53.3 53.3s-23.9 53.3-53.3 53.3zM157.5 255.3c-20.9 0-38.9 20.8-40.2 47.9s17.1 38.1 38 38.1s36.6-9.8 37.8-36.9s-14.7-49.1-35.7-49.1zM395 303.1c-1.2-27.1-19.2-47.9-40.2-47.9s-36.9 22-35.7 49.1c1.2 27.1 16.9 36.9 37.8 36.9s39.3-11 38-38.1zm-60.1 70.8c1.5-3.6-1-7.7-4.9-8.1c-23-2.3-47.9-3.6-73.8-3.6s-50.8 1.3-73.8 3.6c-3.9 .4-6.4 4.5-4.9 8.1c12.9 30.8 43.3 52.4 78.7 52.4s65.8-21.6 78.7-52.4z"/></svg>
-            </a>
-            <a href="#" target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z"/></svg>
-            </a>
+    <div id="nav" class="nav">
+        <input type="checkbox" id="nav-check">
+        <div class="nav-header">
+            <div class="nav-title">
+                <span><img src="https://github.com/giticnetwork/frontend/blob/main/Untitled.png"
+                        width="30" height="30"></span>
+            </div>
         </div>
-        <p class="copyright">&copy; 2024 Gitic Foundation Copyright</p>
-  </div>
-</div>
-    </div>
-</section>
-
+        <div class="nav-btn">
+            <label for="nav-check">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </div>
+        <div class="nav-links">
+            <a href="#intro">Foundation</a>
+            <a href="#intro">Introduction</a>
+            <a href="#vote">System</a>
+            <a href="#states">Voting</a>
+            <a href="#community" style="margin-right: 10px;">Programs</a>
+        </div>
+        </div>
+    </section>
    
 
 
-     <!-- HERO SECTION -->
-<section class="hero">
-    <div class="container">
-        <h1>Where 
-        <span href="#" class="typewrite" data-period="2000" data-type='["Ethereum", "Solana", "Cardano"]'><span class="wrap"></span><br />&nbsp;
-</span>State<br /> Unite for Decentralized Empowerment.</h1>
-        
-        
-    <a href="#ecosystem" target="_blank" rel="noreferrer" style="text-decoration: none;">
-  <div class="btn" style="">
-    <svg viewBox="0 0 99 21" version="1.1" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle; margin-right: 15px;">
-      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g class="arrow" transform="translate(-905.000000, -1052.000000)" stroke="var(--gitic-whitecolor)">
-          <g transform="translate(906.500000, 1054.000000)">
-            <line x1="0.5" y1="8.5" x2="90.5" y2="8.5" stroke-width="3" stroke-linecap="square"></line>
-            <polyline stroke-width="4" points="81.165778 0 93.665778 8.5 81.165778 17"></polyline>
-          </g>
-        </g>
-      </g>
-    </svg>
-    Grantpaper
-  </div>
-</a>
-
-    </div>
-</section>
-<!-- /HERO SECTION -->
+    <section class="hero">
+        <div class="container">
+            <h1>Your <span style="color: var(--gitic-viocolor);">Vote,</span> Our <span style="color: var(--gitic-viocolor);"> Future</span></h1>
+            <p>Vote for Transparency, Empowerment, and Invnnovation.</p>
+            <a href="#vote" class="btn">Grantpaper</a>
+            <a href="#vote" class="btn" style="background-color: transparent; color: var(--gitic-whitecolor); border: 3px solid var(--gitic-basecolor);">Vote Now</a>
+        </div>
+    </section>
 
 
 
@@ -125,7 +83,6 @@
 
 
 
-    
 
 
     <section class="feature-v7 cd-position-relative cd-z-index-1 cd-padding-y-2xl">
@@ -263,6 +220,8 @@
 
 
 
+
+    
 <div class="flex-container3">
     <div class="flex-item-left3">
         <img src="https://cdn.ethancopping.com/codepen/Interactive%20Dual%20Hover%20Card/proxmox.png">
@@ -288,6 +247,10 @@
         </a>
     </div>
 </div>
+
+
+
+
 
 
 
@@ -334,7 +297,7 @@
         </div>
     </li>
     <li class="stack-cards__item sg0-bg-light sg0-radius-lg sg0-inner-glow sg0-shadow-md js-stack-cards__item">
-        <div class="sg0-flex sg0-flex-center"> <h1>Why Vote?</h1></div>
+        <div class="sg0-flex sg0-flex-center"> <h1><span style="color: var(--gitic-viocolor)">Why</span> Vote?</h1></div>
     </li>
 
     <li class="stack-cards__item sg0-bg-light sg0-radius-lg sg0-inner-glow sg0-shadow-md js-stack-cards__item">
@@ -342,15 +305,15 @@
             <p>
                 At Gitic, your vote is your voice in shaping the future of decentralized governance. By participating in the voting
                 process, you play a crucial role in deciding the direction of the Gitic ecosystem. Your vote ensures that the decisions
-                made align with the values and goals of the community. So, why wait? Cast your vote today and be a part of building a
-                decentralized future together!
+                made align with the values and goals of the community. So, why wait? Cast your vote on <i style="color: var(--gitic-viocolor);">5th February 2024</i> 
+                 and be a part of building a decentralized future together!
             </p>
         </div>
     </li>
 
     <li class="stack-cards__item sg0-bg-light sg0-radius-lg sg0-inner-glow sg0-shadow-md js-stack-cards__item">
         <div class="sg0-flex sg0-flex-center">
-            <h1>Voting Benefits</h1>
+            <h1><span style="color: var(--gitic-viocolor)">Voting</span> Benefits</h1>
         </div>
     </li>
 
@@ -367,39 +330,66 @@
 
     <li class="stack-cards__item sg0-bg-light sg0-radius-lg sg0-inner-glow sg0-shadow-md js-stack-cards__item">
         <div class="sg0-flex sg0-flex-center">
-            <h1>Governance</h1>
+            <h1><span style="color: var(--gitic-viocolor)">Governance</span> Concept</h1>
             </div>
     </li>
 
     <li class="stack-cards__item sg0-bg-light sg0-radius-lg sg0-inner-glow sg0-shadow-md js-stack-cards__item">
         <div class="sg0-flex sg0-flex-center">
             <p>
-                Gitic Governance represents an unstoppable decentralized system characterized by its core components
-                - a robust constitution, an annually curated budget, and the diverse framework of states operating
-                across various blockchain networks. This governance structure embodies the essence of decentralized
-                decision-making, fostering an ecosystem driven by collective and inclusive participation.
-                Through Gitic Governance, stakeholders actively contribute to shaping the trajectory
-                of the organization, ensuring a resilient and adaptable
-                foundation for a decentralized and democratic future.
+             Gitic Governance represents an unstoppable decentralized system characterized by its core components - 
+         a smart contract constitution, citizenship, an annually curated budget, and the diverse framework of
+          states operating across various blockchain networks. This governance structure embodies the essence
+           of decentralized decision-making, fostering an ecosystem driven by collective and inclusive participation.
+            Through Gitic Governance, stakeholders actively contribute to shaping the trajectory of the organization,
+             ensuring a resilient and adaptable foundation f or a decentralized and democratic future.
             </p>
-        </div>
-    </li>
-
-    <li class="stack-cards__item sg0-bg-light sg0-radius-lg sg0-inner-glow sg0-shadow-md js-stack-cards__item">
-        <div class="sg0-flex sg0-flex-center">
-            <a href="#about">
-                Read Grantpaper
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="1" stroke-linecap="butt" stroke-linejoin="round">
-                    <path d="M7 17l9.2-9.2M17 17V7H7" />
-                </svg>
-            </a>
         </div>
     </li>
 </ul>
 
 
 
+
+
+
+
+
+<div id="voting-info">
+    <h2>Token System <span style="color: var(--gitic-viocolor);">vs</span> Tokenless System</h2>
+    <div class="voting-option" id="token-system">
+        <h3>Token System</h3>
+        <p>Under a token system, Gitic would have its native token that is used for governance, voting, and other activities within the network.</p>
+        <h4>Advantages:</h4>
+        <ul>
+            <li>Clear tokenomics for governance and incentives</li>
+            <li>Direct control over the token supply and distribution</li>
+            <li>Can be used to incentivize participation</li>
+        </ul>
+        <h4>Disadvantages:</h4>
+        <ul>
+            <li>Requires additional effort for token management and distribution</li>
+            <li>May introduce regulatory complexities</li>
+            <li>Dependency on external market forces</li>
+        </ul>
+    </div>
+    <div class="voting-option" id="tokenless-system">
+        <h3>Tokenless System</h3>
+        <p>Under a tokenless system, Gitic would operate without its native token, using the native tokens of the underlying blockchain networks for governance.</p>
+        <h4>Advantages:</h4>
+        <ul>
+            <li>Simplified governance without the need for a separate token</li>
+            <li>Less regulatory scrutiny compared to native tokens</li>
+            <li>Can leverage existing tokens and infrastructure</li>
+        </ul>
+        <h4>Disadvantages:</h4>
+        <ul>
+            <li>Less control over governance mechanisms</li>
+            <li>Dependency on external blockchain networks</li>
+            <li>Potential interoperability issues</li>
+        </ul>
+    </div>
+</div>
 
 
 
@@ -419,143 +409,6 @@
     <h2><span id="demo" style="color: var(--gitic-viocolor);"></span> days left</h2>
   </div>
 </section>
-
-
-
-
-
-
-<!-- Programs -->
-<section class="programs" id="states">
-    <div class="content">
-        <h1>Your <i style="color: var(--gitic-viocolor);">Vote,</i> Our <i style="color: var(--gitic-viocolor);">Future</i></h1>
-        <p>Vote for Transparency, Empowerment, and Invnnovation.</p>
-    </div>
-</section>
-
-<div class="accordion-container">
-    <details class="accordion">
-        <summary class="accordion-header">
-            <div class="accordion-header-content">
-                <h2 class="accordion-header-content-title">Ethereum State</h2>
-            </div>
-        </summary>
-        <div class="accordion-content">
-            <p class="accordion-content-text">
-            Gitic aims to improve Ethereum by introducing innovative governance mechanisms, funding scalability solutions, enhancing
-            interoperability, improving security measures, supporting developers, and engaging with the community to drive growth
-            and innovation on the platform.
-            </p>
-        </div>
-    </details>
-</div>
-
-<div class="accordion-container" id="nav-programs">
-    <details class="accordion">
-        <summary class="accordion-header">
-            <div class="accordion-header-content">
-                <h2 class="accordion-header-content-title">Solana State</h2>
-            </div>
-        </summary>
-        <div class="accordion-content">
-            <p class="accordion-content-text">
-                Gitic seeks to enhance Solana by introducing novel governance mechanisms, supporting scalability solutions, fostering
-                interoperability, improving security measures, empowering developers, and engaging with the community to drive growth
-                and innovation on the network.
-            </p>
-        </div>
-    </details>
-</div>
-
-<div class="accordion-container">
-    <details class="accordion">
-        <summary class="accordion-header">
-            <div class="accordion-header-content">
-                <h2 class="accordion-header-content-title">Cardano State</h2>
-            </div>
-        </summary>
-        <div class="accordion-content">
-            <p class="accordion-content-text">
-                Gitic seeks to enhance Cardano by introducing innovative governance models, funding scalability solutions,
-                enhancing interoperability, improving security measures, supporting developers, and engaging with the community to drive
-                growth and innovation on the network.
-            </p>
-        </div>
-    </details>
-</div>
-
-<div class="accordion-container">
-    <details class="accordion">
-        <summary class="accordion-header">
-            <div class="accordion-header-content">
-                <h2 class="accordion-header-content-title">Polkadot States</h2>
-            </div>
-        </summary>
-        <div class="accordion-content">
-            <p class="accordion-content-text">
-                Gitic aims to improve Polkadot by introducing novel governance mechanisms, supporting scalability solutions,
-                fostering interoperability, enhancing security measures, empowering developers, and engaging with the community to drive
-                growth and innovation across the ecosystem.
-            </p>
-        </div>
-    </details>
-</div>
-
-<div class="accordion-container">
-    <details class="accordion">
-        <summary class="accordion-header">
-            <div class="accordion-header-content">
-                <h2 class="accordion-header-content-title">Binance State</h2>
-            </div>
-        </summary>
-        <div class="accordion-content">
-            <p class="accordion-content-text">
-                Gitic seeks to enhance Binance Smart Chain by introducing innovative governance mechanisms,
-                supporting scalability solutions, fostering interoperability, improving security measures, empowering developers, and
-                engaging with the community to drive growth and innovation on the network.
-            </p>
-        </div>
-    </details>
-</div>
-
-<div class="accordion-container">
-    <details class="accordion">
-        <summary class="accordion-header">
-            <div class="accordion-header-content">
-                <h2 class="accordion-header-content-title">NEAR State</h2>
-            </div>
-        </summary>
-        <div class="accordion-content">
-            <p class="accordion-content-text">
-                Gitic aims to improve NEAR Protocol by introducing novel governance mechanisms, supporting scalability
-                solutions, fostering interoperability, enhancing security measures, empowering developers, and engaging with the
-                community to drive growth and innovation across the ecosystem.
-            </p>
-        </div>
-    </details>
-</div>
-
-<div class="accordion-container">
-    <details class="accordion">
-        <summary class="accordion-header">
-            <div class="accordion-header-content">
-                <h2 class="accordion-header-content-title">Chainlink State</h2>
-            </div>
-        </summary>
-        <div class="accordion-content">
-            <p class="accordion-content-text">
-            Gitic seeks to enhance Chainlink by introducing innovative governance models, funding scalability solutions,
-            enhancing interoperability, improving security measures, supporting developers, and engaging with the community to drive
-            growth and innovation on the network.
-            </p>
-        </div>
-    </details>
-</div>
-<!-- /Programs -->
-
-
-
-
 
 
 
