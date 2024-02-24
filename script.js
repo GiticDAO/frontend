@@ -1,17 +1,3 @@
-function openNav() {
-  document.getElementById("myNav").style.display = "block";
-}
-
-function closeNav() {
-  document.getElementById("myNav").style.display = "none";
-}
-
-
-
-
-
-
-
 // ---*** Typing Effects ***---
 var TxtType = function (el, toRotate, period) {
     this.toRotate = toRotate;
@@ -66,7 +52,7 @@ window.onload = function () {
     // INJECT CSS
     var css = document.createElement("style");
     css.type = "text/css";
-    css.innerHTML = ".typewrite > .wrap {border-right: 5px solid var(--gitic-background01)}";
+    css.innerHTML = ".typewrite > .wrap {border-right: 2px solid var(--gitic-viocolor)}";
     document.body.appendChild(css);
 };
 
@@ -100,9 +86,10 @@ setTimeout(function start() {
 
 
 
+
 // script.js
 // Set the date we're counting down to
-var countDownDate = new Date("Feb 30, 2024 15:37:25").getTime();
+var countDownDate = new Date("March 5, 2024 15:37:25").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function () {
@@ -129,7 +116,6 @@ var x = setInterval(function () {
         document.getElementById("demo").innerHTML = "EXPIRED";
     }
 }, 1000);
-
 
 
 
