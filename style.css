@@ -478,51 +478,51 @@ margin-top: 5px;
 
 
 
-
-
-
-.flex-container3 {
-    background-color: var(--gitic-background02);
-  display: flex;
-  flex-direction: row;
-  font-size: 30px;
-  padding: 50px 30px;
-  text-align: center;
-  margin-top: 150px;
+.flex-container1 {
+    background-color: #cccccc;
+    box-shadow: var(--box-shadow);
+    border-top: 3px solid var(--gitic-basecolor);
+    border-bottom: 3px solid var(--gitic-basecolor);
+    display: flex;
+    flex-direction: row;
+    font-size: 30px;
+    padding: 50px 30px;
+    text-align: center;
+    margin-top: 150px;
 }
 
-.flex-item-left3 {
-  background-color: var(--gitic-maincolor);
-  padding: 20px 0px;
-  margin: 10px;
-  border-radius: 16px;
-  flex: 50%;
+.flex-item-left1 {
+    padding: 20px 0px;
+    margin: 10px;
+    border-radius: 16px;
+    flex: 50%;
 }
 
-.flex-item-left3 img {
+.flex-item-left1 img {
     width: 70%;
     height: 350px;
 }
 
-.flex-item-right3 {
-  padding: 10px;
-  margin: 20px 0px;
-  flex: 50%;
-  text-align: left;
+.flex-item-right1 {
+    padding: 10px;
+    margin: 20px 0px;
+    flex: 50%;
+    text-align: left;
 }
 
-.flex-item-right3 h1 {
-  color: var(--gitic-whitecolor);
-  font-size: 100px;
+.flex-item-right1 h1 {
+    color: var(--gitic-cardcolor);
+    font-size: 100px;
 }
 
-.flex-item-right3 p {
-  font-size: 21px;
+.flex-item-right1 p {
+    color: var(--gitic-cardcolor);
+    font-size: 21px;
 }
 
-.flex-item-right3 a {
-    background-color: var(--gitic-viocolor);
-    border: 3px solid var(--gitic-viocolor);
+.flex-item-right1 a {
+    background-color: var(--gitic-indianred);
+    border: 3px solid var(--gitic-indianred);
     box-shadow: var(--box-shadow);
     color: var(--gitic-whitecolor);
     border-radius: 8px;
@@ -537,41 +537,46 @@ margin-top: 5px;
 }
 
 
-.flex-item-right3 a:hover {
-   transform: translateY(-.2rem);
-      text-decoration: none;
+.flex-item-right1 a:hover {
+    transform: translateY(-.2rem);
+    text-decoration: none;
 }
 
 /* Responsive layout - makes a one column-layout instead of two-column layout */
-@media (max-width: 800px) {
-  .flex-container3 {
-    flex-direction: column;
-  }
+@media (max-width: 768px) {
+    .flex-container1 {
+        flex-direction: column;
+        margin-top: -5px;
+    }
 
-  .flex-item-left3 {
-      background-color: var(--gitic-maincolor);
-      padding: 20px 0px;
-  }
+    .flex-item-left1 {
+        padding: 20px 0px;
+    }
 
-  .flex-item-right3 {
-      text-align: center;
-  }
+        .flex-item-left1 img {
+            width: 80%;
+            height: 250px;
+        }
 
-  .flex-item-right3 h1 {
-      font-size: 30px;
-  }
+    .flex-item-right1 {
+        text-align: center;
+    }
 
-  .flex-item-right3 p {
-      font-size: 19px;
-  }
+    .flex-item-right1 h1 {
+        font-size: 30px;
+    }
 
-  .flex-item-right3 a {
-      font-size: 19px;
-      width: 100%;
-      padding: 9px 0px;
-      transition: background-color 0.3s;
-  }
+    .flex-item-right1 p {
+        font-size: 17px;
+    }
+
+    .flex-item-right1 a {
+        font-size: 17px;
+        width: 100%;
+        padding: 8px 0px;
+    }
 }
+
 
 
 
