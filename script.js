@@ -1,3 +1,17 @@
+function openNav() {
+  document.getElementById("myNav").style.display = "block";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.display = "none";
+}
+
+
+
+
+
+
+
 // ---*** Typing Effects ***---
 var TxtType = function (el, toRotate, period) {
     this.toRotate = toRotate;
@@ -52,7 +66,7 @@ window.onload = function () {
     // INJECT CSS
     var css = document.createElement("style");
     css.type = "text/css";
-    css.innerHTML = ".typewrite > .wrap {border-right: 2px solid var(--gitic-viocolor)}";
+    css.innerHTML = ".typewrite > .wrap {border-right: 5px solid var(--gitic-whitecolor)}";
     document.body.appendChild(css);
 };
 
@@ -85,37 +99,39 @@ setTimeout(function start() {
 
 
 
-
-
-// script.js
 // Set the date we're counting down to
-var countDownDate = new Date("Feb 22, 2024 15:37:25").getTime();
+var countDownDate = new Date("March 15, 2024 00:00:00").getTime();
 
-// Update the count down every 1 second
-var x = setInterval(function () {
+// Update the countdown every 1 second
+var x = setInterval(function() {
 
-    // Get today's date and time
+    // Get the current date and time
     var now = new Date().getTime();
 
-    // Find the distance between now and the count down date
+    // Calculate the distance between now and the countdown date
     var distance = countDownDate - now;
 
-    // Time calculations for days, hours, minutes and seconds
+    // Calculate days, hours, minutes and seconds
     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
     var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    // Output the result in an element with id="demo"
-    document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-        + minutes + "m " + seconds + "s ";
+    // Display the countdown
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
 
-    // If the count down is over, write some text 
+    // If the countdown is over, display a message
     if (distance < 0) {
         clearInterval(x);
-        document.getElementById("demo").innerHTML = "EXPIRED";
+        document.getElementById("countdown").innerHTML = "Voting is now open!";
     }
 }, 1000);
+
+
+
 
 
 
