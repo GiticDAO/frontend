@@ -588,10 +588,6 @@ margin-top: 5px;
 
 
 
-
-
-
-
 /* -------------------------------- 
 
 File#: _1_stacking-cards
@@ -611,6 +607,7 @@ Usage: codyhouse.co/license
   padding: 0;
   border: 0;
 }
+
 
 h1, h2, h3, h4 {
   line-height: 1.2;
@@ -661,6 +658,10 @@ table {
   border-spacing: 0;
 }
 
+img, video, svg {
+  display: block;
+  max-width: 100%;
+}
 
 @media (min-width: 64rem) {
   body {
@@ -738,97 +739,21 @@ table {
 }
 
 .sg0-shadow-md {
-  box-shadow: var(--gitic-background01);
+  box-shadow:0 0.9px 1.5px rgba(0, 0, 0, 0.03),0 3.1px 5.5px rgba(0, 0, 0, 0.08),0 14px 25px rgba(0, 0, 0, 0.12);
 }
 
 .sg0-radius-lg {
-  border-radius: 0;
+  border-radius: 0.5em;
 }
 
 .sg0-bg {
   --sg0-bg-o: 1;
-  background-color: var(--gitic-background02);
+  background-color: hsla(var(--sg0-color-bg-hsl), var(--sg0-bg-o, 1));
 }
 
 .sg0-flex-center {
   justify-content: center;
   align-items: center;
-}
-
-.sg0-flex-center h1 {
-    color: var(--gitic-whitecolor);
-    font-size: 100px;
-    justify-content: center;
-    align-items: center;
-}
-
-.sg0-flex-center p {
-    text-align: center;
-    align-items: center;
-    padding: 0px 150px;
-}
-
-.sg0-flex-center a {
-    background: var(--gitic-whitecolor);
-    box-shadow: var(--box-shadow);
-    border-radius: 16px;
-    color: var(--gitic-maincolor);
-    font-size: 22px;
-    font-weight: 400;
-    display: inline-block;
-    text-decoration: none;
-    border-radius: 8px;
-    padding: 12px 30px;
-    text-align: center;
-    margin-top: 15px;
-    gap: 5px;
-    transition: background-color 0.3s;
-}
-
-.sg0-flex-center a:hover,
-a:focus {
-    transform: translateY(-.2rem);
-    text-decoration: none;
-}
-
-@media (max-width: 768px) {
-    .sg0-flex-center h1 {
-            color: var(--gitic-whitecolor);
-            font-size: 35px;
-            justify-content: center;
-            align-items: center;
-        }
-    
-        .sg0-flex-center p {
-            font-size: 19px;
-            text-align: center;
-            align-items: center;
-            padding: 0px 20px;
-        }
-    
-        .sg0-flex-center a {
-            background: var(--gitic-whitecolor);
-            box-shadow: var(--box-shadow);
-            border-radius: 8px;
-            color: var(--gitic-maincolor);
-            font-size: 19px;
-            font-weight: 400;
-            display: inline-block;
-            text-decoration: none;
-            border-radius: 8px;
-            padding: 11px;
-            width: 90%;
-            text-align: center;
-            margin-top: 15px;
-            gap: 5px;
-            transition: background-color 0.3s;
-        }
-    
-        .sg0-flex-center a:hover,
-        a:focus {
-            transform: translateY(-.2rem);
-            text-decoration: none;
-        }
 }
 
 .sg0-flex {
@@ -848,18 +773,13 @@ a:focus {
   height: 100%;
   border-radius: inherit;
   pointer-events: none;
-  box-shadow: inset ;
+  box-shadow: inset 0 0 0.5px 1px hsla(0, 0%, 100%, 0.075);
 }
 
 .sg0-bg-light {
   --sg0-bg-o: 1;
-  background-color: var(--gitic-background02);
+  background-color: hsla(var(--sg0-color-bg-light-hsl), var(--sg0-bg-o, 1));
 }
-
-
-
-
-
 
 
 
