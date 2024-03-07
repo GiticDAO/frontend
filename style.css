@@ -349,8 +349,8 @@ svg:not(:root) {
       }
 
       .hero h1 {
-          font-size: 30px;
-          margin-top: 50px;
+          font-size: 35px;
+          margin-top: 40px;
       }
 
 
@@ -359,7 +359,7 @@ svg:not(:root) {
               padding: 10px 0px;
               margin-top: 30px;
               font-family: Arial;
-              font-size: 19px;
+              font-size: 17px;
               border-radius: 5px;
           }
     
