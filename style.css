@@ -498,8 +498,6 @@ a:focus {
 .card {
     background-color: var(--gitic-background02);
     box-shadow: var(--box-shadow);
-    border-right: 3px solid var(--gitic-indianred);
-    border-left: 3px solid var(--gitic-indianred);
     padding: 20px;
     text-align: left;
     text-decoration: none;
